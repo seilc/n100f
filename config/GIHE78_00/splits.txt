@@ -210,7 +210,7 @@ SD2/Game/flat/xSurface.cpp:
 	.text       start:0x80040EE4 end:0x80040FCC
 
 SD2/Game/flat/xTRC.cpp:
-	.text       start:0x80044714 end:0x80044780
+	.text       start:0x80040FCC end:0x80044780
 
 SD2/Game/flat/xutil.cpp:
 	.text       start:0x80044780 end:0x80044BCC
