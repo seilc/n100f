@@ -1,0 +1,7 @@
+# The DOL's entry is an HI stack-fill wrapper that calls __start, so dtk splits a copy
+# with the entry set to __start (configure.py: split_entry_patch).
+object: build/GIHE78_00/orig/main.dol
+hash: 11fe17e524a1c666ba6b2b3f8cebe24f75ec5ab8
+symbols: config/GIHE78_00/symbols.txt
+splits: config/GIHE78_00/splits.txt
+ldscript_template: config/GIHE78_00/ldscript.tpl
