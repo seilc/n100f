@@ -21,7 +21,8 @@ SD2/Game/flat/iCollide.cpp:
 	.text       start:0x80007738 end:0x80009424
 
 SD2/Game/flat/iCollideFast.cpp:
-	.text       start:0x80009A1C end:0x80009A20
+	.text       start:0x80009424 end:0x80009A20
+	.sbss       start:0x8025E888 end:0x8025E88C
 
 SD2/Game/flat/iDebug.cpp:
 	.text       start:0x80009A20 end:0x80009CC0

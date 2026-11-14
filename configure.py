@@ -241,10 +241,11 @@ cflags_game = [
     "-char unsigned",
     "-str reuse,readonly",
     "-use_lmw_stmw on",
-    "-inline off,deferred",
+    "-inline auto,deferred",
     "-i src/dolphin/include",
     "-i src/dolphin/include/libc",
     "-i src/SD2/Game/flat",
+    "-i src/rwsdk/include",
     "-prefix prefix.mch",
 ]
 
@@ -338,7 +339,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/iAnimSKB.cpp"),
             Object(NonMatching, "SD2/Game/flat/iCamera.cpp"),
             Object(NonMatching, "SD2/Game/flat/iCollide.cpp"),
-            Object(NonMatching, "SD2/Game/flat/iCollideFast.cpp"),
+            Object(Matching, "SD2/Game/flat/iCollideFast.cpp"),
             Object(NonMatching, "SD2/Game/flat/iDebug.cpp"),
             Object(NonMatching, "SD2/Game/flat/iDraw.cpp"),
             Object(NonMatching, "SD2/Game/flat/iEnv.cpp"),
