@@ -1,5 +1,5 @@
 Scooby-Doo! Night of 100 Frights (GameCube)  
-<!--[![Build Status]][actions]--> <!--[![Code Progress]][progress] [![Data Progress]][progress]--> [![Discord Badge]][discord]
+[![Discord Badge]][discord] <!--[![Build Status]][actions] [![Code Progress]][progress] [![Data Progress]][progress]-->
 =============
 
 <!--
