@@ -408,6 +408,85 @@ PowerPC_EABI_Support/Runtime/Src/global_destructor_chain.c:
 	.dtors      start:0x8018E5E0 end:0x8018E5E4
 	.sbss       start:0x8025F218 end:0x8025F220
 
+dolphin/src/ai/ai.c:
+	.text       start:0x800F439C end:0x800F4C5C
+	.sbss       start:0x8025F260 end:0x8025F2A0
+
+dolphin/src/amcstubs/AmcExi2Stubs.c:
+	.text       start:0x800F4C5C end:0x800F4C8C
+
+dolphin/src/ar/ar.c:
+	.text       start:0x800F4C8C end:0x800F58E4
+	.sbss       start:0x8025F2A0 end:0x8025F2C0
+
+dolphin/src/ar/arq.c:
+	.text       start:0x800F58E4 end:0x800F5DD0
+	.sbss       start:0x8025F2C0 end:0x8025F2F0
+
+dolphin/src/ax/AX.c:
+	.text       start:0x800F5DD0 end:0x800F5E38
+
+dolphin/src/ax/AXAlloc.c:
+	.text       start:0x800F5E38 end:0x800F630C
+	.bss        start:0x80242BD0 end:0x80242CD0
+	.sbss       start:0x8025F2F0 end:0x8025F2F8
+
+dolphin/src/ax/AXAux.c:
+	.text       start:0x800F630C end:0x800F6628
+	.bss        start:0x80242CE0 end:0x802459E0 align:32
+	.sbss       start:0x8025F2F8 end:0x8025F328
+
+dolphin/src/ax/AXCL.c:
+	.text       start:0x800F6628 end:0x800F6A9C
+	.bss        start:0x802459E0 end:0x80245FE0
+	.sbss       start:0x8025F328 end:0x8025F338
+
+dolphin/src/ax/AXOut.c:
+	.text       start:0x800F6A9C end:0x800F715C
+	.bss        start:0x80245FE0 end:0x8024A800
+	.sbss       start:0x8025F338 end:0x8025F358
+
+dolphin/src/ax/AXSPB.c:
+	.text       start:0x800F715C end:0x800F7624
+	.bss        start:0x8024A800 end:0x8024A838
+	.sbss       start:0x8025F358 end:0x8025F380
+
+dolphin/src/ax/AXVPB.c:
+	.text       start:0x800F7624 end:0x800F8734
+	.data       start:0x801CABD0 end:0x801CAC64
+	.bss        start:0x8024A840 end:0x8025A640 align:32
+	.sbss       start:0x8025F380 end:0x8025F390
+	.sdata2     start:0x80262680 end:0x80262688
+
+dolphin/src/ax/DSPCode.c:
+	.data       start:0x801CAC80 end:0x801CC660 align:32
+	.sdata      start:0x8025E620 end:0x8025E628
+
+dolphin/src/ax/AXProf.c:
+	.text       start:0x800F8734 end:0x800F877C
+	.sbss       start:0x8025F390 end:0x8025F3A0
+
+dolphin/src/base/PPCArch.c:
+	.text       start:0x800F877C end:0x800F8824
+
+dolphin/src/db/db.c:
+	.text       start:0x800F8824 end:0x800F8910
+	.data       start:0x801CC660 end:0x801CC678
+	.sbss       start:0x8025F3A0 end:0x8025F3A8
+
+dolphin/src/dsp/dsp.c:
+	.text       start:0x800F8910 end:0x800F8BEC
+	.data       start:0x801CC678 end:0x801CC6B0
+	.sbss       start:0x8025F3A8 end:0x8025F3AC
+
+dolphin/src/dsp/dsp_debug.c:
+	.text       start:0x800F8BEC end:0x800F8C3C
+
+dolphin/src/dsp/dsp_task.c:
+	.text       start:0x800F8C3C end:0x800F94C0
+	.data       start:0x801CC6B0 end:0x801CC7F0
+	.sbss       start:0x8025F3AC end:0x8025F3C8
+
 dolphin/src/exi/EXIBios.c:
 	.text       start:0x800F94C0 end:0x800FAD8C
 	.bss        start:0x8025A640 end:0x8025A700
@@ -474,7 +553,7 @@ dolphin/src/gx/GXStubs.c:
 dolphin/src/gx/GXDisplayList.c:
 	.text       start:0x80102004 end:0x80102210
 	.bss        start:0x8025AC78 end:0x8025B194
-	.sbss       start:0x8025F420 end:0x8025F424
+	.sbss       start:0x8025F420 end:0x8025F428
 
 dolphin/src/gx/GXTransform.c:
 	.text       start:0x80102210 end:0x801028E0
@@ -482,7 +561,7 @@ dolphin/src/gx/GXTransform.c:
 
 dolphin/src/gx/GXPerf.c:
 	.text       start:0x801028E0 end:0x80103188
-	.data       start:0x801CCC90 end:0x801CCD7C
+	.data       start:0x801CCC90 end:0x801CCD80
 
 dolphin/src/mtx/mtx.c:
 	.text       start:0x80103188 end:0x80103280
@@ -493,6 +572,102 @@ dolphin/src/mtx/mtx44.c:
 	.text       start:0x80103280 end:0x80103318
 	.sdata2     start:0x80262770 end:0x80262780
 
+dolphin/src/odenotstub/odenotstub.c:
+	.text       start:0x80103318 end:0x80103320
+
+dolphin/src/os/OS.c:
+	.text       start:0x80103320 end:0x80103C58
+	.data       start:0x801CCD80 end:0x801CCF40
+	.bss        start:0x8025B1A0 end:0x8025B1F0 align:32
+	.sbss       start:0x8025F428 end:0x8025F450
+
+dolphin/src/os/OSAddress.c:
+	.text       start:0x80103C58 end:0x80103C68
+
+dolphin/src/os/OSAlarm.c:
+	.text       start:0x80103C68 end:0x8010438C
+	.sbss       start:0x8025F450 end:0x8025F458
+
+dolphin/src/os/OSAlloc.c:
+	.text       start:0x8010438C end:0x8010469C
+	.sdata      start:0x8025E688 end:0x8025E690
+	.sbss       start:0x8025F458 end:0x8025F468
+
+dolphin/src/os/OSArena.c:
+	.text       start:0x8010469C end:0x801046BC
+	.sdata      start:0x8025E690 end:0x8025E698
+	.sbss       start:0x8025F468 end:0x8025F470
+
+dolphin/src/os/OSAudioSystem.c:
+	.text       start:0x801046BC end:0x80104950
+	.data       start:0x801CCF40 end:0x801CCFC0
+
+dolphin/src/os/OSCache.c:
+	.text       start:0x80104950 end:0x80104D9C
+	.data       start:0x801CCFC0 end:0x801CD1F0
+
+dolphin/src/os/OSContext.c:
+	.text       start:0x80104D9C end:0x80105548
+	.data       start:0x801CD1F0 end:0x801CD3C8
+
+dolphin/src/os/OSError.c:
+	.text       start:0x80105548 end:0x80105890
+	.data       start:0x801CD3C8 end:0x801CD6E8
+	.bss        start:0x8025B1F0 end:0x8025B230
+	.sdata      start:0x8025E698 end:0x8025E6A0
+
+dolphin/src/os/OSFont.c:
+	.text       start:0x80105890 end:0x801058E8
+	.sdata      start:0x8025E6A0 end:0x8025E6A8
+
+dolphin/src/os/OSInterrupt.c:
+	.text       start:0x801058E8 end:0x80106150
+	.data       start:0x801CD6E8 end:0x801CD718
+	.sbss       start:0x8025F470 end:0x8025F488
+
+dolphin/src/os/OSLink.c:
+	.text       start:0x80106150 end:0x80106168
+
+dolphin/src/os/OSMemory.c:
+	.text       start:0x80106168 end:0x80106448
+	.data       start:0x801CD718 end:0x801CD728
+
+dolphin/src/os/OSMutex.c:
+	.text       start:0x80106448 end:0x801064B8
+
+dolphin/src/os/OSReboot.c:
+	.text       start:0x801064B8 end:0x801066C4
+	.bss        start:0x8025B240 end:0x8025B260 align:32
+	.sbss       start:0x8025F488 end:0x8025F498
+
+dolphin/src/os/OSReset.c:
+	.text       start:0x801066C4 end:0x80106AA8
+	.sbss       start:0x8025F498 end:0x8025F4A0
+
+dolphin/src/os/OSResetSW.c:
+	.text       start:0x80106AA8 end:0x80106E34
+	.sbss       start:0x8025F4A0 end:0x8025F4C0
+
+dolphin/src/os/OSRtc.c:
+	.text       start:0x80106E34 end:0x8010774C
+	.bss        start:0x8025B260 end:0x8025B2B8
+
+dolphin/src/os/OSSync.c:
+	.text       start:0x8010774C end:0x801077D0
+
+dolphin/src/os/OSThread.c:
+	.text       start:0x801077D0 end:0x80108608
+	.bss        start:0x8025B2B8 end:0x8025BCA0
+	.sbss       start:0x8025F4C0 end:0x8025F4D0
+
+dolphin/src/os/OSTime.c:
+	.text       start:0x80108608 end:0x80108A84
+	.data       start:0x801CD728 end:0x801CD788
+
+dolphin/src/os/__ppc_eabi_init.c:
+	.init       start:0x800054F4 end:0x80005548
+	.text       start:0x80108A84 end:0x80108B18
+
 dolphin/src/si/SIBios.c:
 	.text       start:0x80108B18 end:0x8010A1F8
 	.data       start:0x801CD788 end:0x801CD858
@@ -501,8 +676,14 @@ dolphin/src/si/SIBios.c:
 
 dolphin/src/si/SISamplingRate.c:
 	.text       start:0x8010A1F8 end:0x8010A300
-	.data       start:0x801CD858 end:0x801CD8EC
-	.sbss       start:0x8025F4E0 end:0x8025F4E4
+	.data       start:0x801CD858 end:0x801CD8F0
+	.sbss       start:0x8025F4E0 end:0x8025F4E8
+
+dolphin/src/vi/vi.c:
+	.text       start:0x8010A300 end:0x8010BD44
+	.data       start:0x801CD8F0 end:0x801CDBB8
+	.bss        start:0x8025BEA0 end:0x8025BFE8
+	.sbss       start:0x8025F4E8 end:0x8025F538
 
 dolphin/src/pad/Padclamp.c:
 	.text       start:0x8010BD44 end:0x8010BF7C

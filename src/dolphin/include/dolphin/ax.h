@@ -192,7 +192,7 @@ struct AX_AUX_DATA {
     /* 0x00 */ long * s;
 };
 
-#define AX_DSP_SLAVE_LENGTH 3264
+#define AX_DSP_SLAVE_LENGTH 3312
 #define AX_MAX_VOICES 64
 
 #define AX_SRC_TYPE_NONE     0

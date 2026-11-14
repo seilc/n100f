@@ -459,6 +459,59 @@ config.libs = [
         ],
     },
     DolphinLib(
+        "ai",
+        [
+            Object(Matching, "dolphin/src/ai/ai.c"),
+        ],
+    ),
+    DolphinLib(
+        "amcstubs",
+        [
+            Object(Matching, "dolphin/src/amcstubs/AmcExi2Stubs.c"),
+        ],
+    ),
+    DolphinLib(
+        "ar",
+        [
+            Object(NonMatching, "dolphin/src/ar/ar.c"),
+            Object(Matching, "dolphin/src/ar/arq.c"),
+        ],
+    ),
+    DolphinLib(
+        "ax",
+        [
+            Object(Matching, "dolphin/src/ax/AX.c"),
+            Object(NonMatching, "dolphin/src/ax/AXAlloc.c"),
+            Object(NonMatching, "dolphin/src/ax/AXAux.c"),
+            Object(NonMatching, "dolphin/src/ax/AXCL.c"),
+            Object(NonMatching, "dolphin/src/ax/AXOut.c"),
+            Object(Matching, "dolphin/src/ax/AXSPB.c"),
+            Object(NonMatching, "dolphin/src/ax/AXVPB.c"),
+            Object(Matching, "dolphin/src/ax/AXProf.c"),
+            Object(Matching, "dolphin/src/ax/DSPCode.c"),
+        ],
+    ),
+    DolphinLib(
+        "base",
+        [
+            Object(Matching, "dolphin/src/base/PPCArch.c"),
+        ],
+    ),
+    DolphinLib(
+        "db",
+        [
+            Object(Matching, "dolphin/src/db/db.c"),
+        ],
+    ),
+    DolphinLib(
+        "dsp",
+        [
+            Object(NonMatching, "dolphin/src/dsp/dsp.c"),
+            Object(NonMatching, "dolphin/src/dsp/dsp_debug.c"),
+            Object(NonMatching, "dolphin/src/dsp/dsp_task.c"),
+        ],
+    ),
+    DolphinLib(
         "exi",
         [
             Object(NonMatching, "dolphin/src/exi/EXIBios.c"),
@@ -493,10 +546,49 @@ config.libs = [
         ],
     ),
     DolphinLib(
+        "odenotstub",
+        [
+            Object(Matching, "dolphin/src/odenotstub/odenotstub.c"),
+        ],
+    ),
+    DolphinLib(
+        "os",
+        [
+            Object(NonMatching, "dolphin/src/os/OS.c"),
+            Object(Matching, "dolphin/src/os/OSAddress.c"),
+            Object(NonMatching, "dolphin/src/os/OSAlarm.c"),
+            Object(Matching, "dolphin/src/os/OSAlloc.c"),
+            Object(Matching, "dolphin/src/os/OSArena.c"),
+            Object(NonMatching, "dolphin/src/os/OSAudioSystem.c"),
+            Object(Matching, "dolphin/src/os/OSCache.c"),
+            Object(Matching, "dolphin/src/os/OSContext.c"),
+            Object(NonMatching, "dolphin/src/os/OSError.c"),
+            Object(Matching, "dolphin/src/os/OSFont.c"),
+            Object(NonMatching, "dolphin/src/os/OSInterrupt.c"),
+            Object(Matching, "dolphin/src/os/OSLink.c"),
+            Object(NonMatching, "dolphin/src/os/OSMemory.c"),
+            Object(Matching, "dolphin/src/os/OSMutex.c"),
+            Object(NonMatching, "dolphin/src/os/OSReboot.c"),
+            Object(NonMatching, "dolphin/src/os/OSReset.c"),
+            Object(NonMatching, "dolphin/src/os/OSResetSW.c"),
+            Object(NonMatching, "dolphin/src/os/OSRtc.c"),
+            Object(Matching, "dolphin/src/os/OSSync.c"),
+            Object(Matching, "dolphin/src/os/OSThread.c"),
+            Object(Matching, "dolphin/src/os/OSTime.c"),
+            Object(Matching, "dolphin/src/os/__ppc_eabi_init.c"),
+        ],
+    ),
+    DolphinLib(
         "si",
         [
             Object(Matching, "dolphin/src/si/SIBios.c"),
             Object(Matching, "dolphin/src/si/SISamplingRate.c"),
+        ],
+    ),
+    DolphinLib(
+        "vi",
+        [
+            Object(NonMatching, "dolphin/src/vi/vi.c"),
         ],
     ),
     DolphinLib(
