@@ -408,6 +408,14 @@ PowerPC_EABI_Support/Runtime/Src/global_destructor_chain.c:
 	.dtors      start:0x8018E5E0 end:0x8018E5E4
 	.sbss       start:0x8025F218 end:0x8025F220
 
+dolphin/src/exi/EXIBios.c:
+	.text       start:0x800F94C0 end:0x800FAD8C
+	.bss        start:0x8025A640 end:0x8025A700
+
+dolphin/src/exi/EXIUart.c:
+	.text       start:0x800FAD8C end:0x800FAFFC
+	.sbss       start:0x8025F3C8 end:0x8025F3D8
+
 dolphin/src/gx/GXInit.c:
 	.text       start:0x800FAFFC end:0x800FC0E8
 	.bss        start:0x8025A700 end:0x8025AC78
@@ -484,3 +492,59 @@ dolphin/src/mtx/mtx.c:
 dolphin/src/mtx/mtx44.c:
 	.text       start:0x80103280 end:0x80103318
 	.sdata2     start:0x80262770 end:0x80262780
+
+dolphin/src/si/SIBios.c:
+	.text       start:0x80108B18 end:0x8010A1F8
+	.data       start:0x801CD788 end:0x801CD858
+	.bss        start:0x8025BCA0 end:0x8025BEA0
+	.sbss       start:0x8025F4D0 end:0x8025F4E0
+
+dolphin/src/si/SISamplingRate.c:
+	.text       start:0x8010A1F8 end:0x8010A300
+	.data       start:0x801CD858 end:0x801CD8EC
+	.sbss       start:0x8025F4E0 end:0x8025F4E4
+
+dolphin/src/pad/Padclamp.c:
+	.text       start:0x8010BD44 end:0x8010BF7C
+	.sdata      start:0x8025E6A8 end:0x8025E6B0
+
+dolphin/src/pad/Pad.c:
+	.text       start:0x8010BF7C end:0x8010DA44
+	.data       start:0x801CDBB8 end:0x801CDBC8
+	.bss        start:0x8025BFE8 end:0x8025C038
+	.sdata      start:0x8025E6B0 end:0x8025E6D0
+	.sbss       start:0x8025F538 end:0x8025F560
+
+dolphin/src/dvd/dvdlow.c:
+	.text       start:0x8010DA44 end:0x8010E898
+	.bss        start:0x8025C038 end:0x8025C108
+	.sdata      start:0x8025E6D0 end:0x8025E6D8
+	.sbss       start:0x8025F560 end:0x8025F5A8
+
+dolphin/src/dvd/dvdfs.c:
+	.text       start:0x8010E898 end:0x8010F23C
+	.data       start:0x801CDBC8 end:0x801CDD58
+	.sdata      start:0x8025E6D8 end:0x8025E6E0
+	.sbss       start:0x8025F5A8 end:0x8025F5C8
+
+dolphin/src/dvd/dvd.c:
+	.text       start:0x8010F23C end:0x801118F0
+	.data       start:0x801CDD58 end:0x801CDE70
+	.bss        start:0x8025C120 end:0x8025C1F8
+	.sdata      start:0x8025E6E0 end:0x8025E6E8
+	.sbss       start:0x8025F5C8 end:0x8025F618
+
+dolphin/src/dvd/dvdqueue.c:
+	.text       start:0x801118F0 end:0x80111AE8
+	.bss        start:0x8025C1F8 end:0x8025C218
+
+dolphin/src/dvd/dvderror.c:
+	.text       start:0x80111AE8 end:0x80111C80
+	.data       start:0x801CDE70 end:0x801CDEB8
+
+dolphin/src/dvd/fstload.c:
+	.text       start:0x80111C80 end:0x80111EC0
+	.data       start:0x801CDEB8 end:0x801CDF28
+	.bss        start:0x8025C218 end:0x8025C288
+	.sdata      start:0x8025E6E8 end:0x8025E6F4
+	.sbss       start:0x8025F618 end:0x8025F624

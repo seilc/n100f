@@ -459,6 +459,13 @@ config.libs = [
         ],
     },
     DolphinLib(
+        "exi",
+        [
+            Object(NonMatching, "dolphin/src/exi/EXIBios.c"),
+            Object(Matching, "dolphin/src/exi/EXIUart.c"),
+        ],
+    ),
+    DolphinLib(
         "gx",
         [
             Object(Matching, "dolphin/src/gx/GXInit.c"),
@@ -483,6 +490,31 @@ config.libs = [
         [
             Object(Matching, "dolphin/src/mtx/mtx.c", extra_cflags=sdk_char_signed),
             Object(Matching, "dolphin/src/mtx/mtx44.c", extra_cflags=sdk_char_signed),
+        ],
+    ),
+    DolphinLib(
+        "si",
+        [
+            Object(Matching, "dolphin/src/si/SIBios.c"),
+            Object(Matching, "dolphin/src/si/SISamplingRate.c"),
+        ],
+    ),
+    DolphinLib(
+        "pad",
+        [
+            Object(Matching, "dolphin/src/pad/Padclamp.c"),
+            Object(Matching, "dolphin/src/pad/Pad.c"),
+        ],
+    ),
+    DolphinLib(
+        "dvd",
+        [
+            Object(Matching, "dolphin/src/dvd/dvdlow.c"),
+            Object(Matching, "dolphin/src/dvd/dvdfs.c", extra_cflags=sdk_char_signed),
+            Object(Matching, "dolphin/src/dvd/dvd.c"),
+            Object(Matching, "dolphin/src/dvd/dvdqueue.c"),
+            Object(Matching, "dolphin/src/dvd/dvderror.c"),
+            Object(Matching, "dolphin/src/dvd/fstload.c", extra_cflags=sdk_char_signed),
         ],
     ),
 ]
