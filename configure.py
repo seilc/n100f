@@ -15,7 +15,7 @@
 import argparse
 import sys
 from pathlib import Path
-from typing import List
+from typing import Any, Dict, List
 
 from tools.project import (
     Object,
@@ -246,6 +246,28 @@ cflags_game = [
 
 config.linker_version = "GC/1.3.2"
 
+# Dolphin SDK flags (dolsdk2001-dec's Makefile, release libraries; Dec 17 2001 SDK).
+cflags_sdk = [
+    "-O4,p",
+    "-inline auto",
+    "-sym on",
+    "-char unsigned",
+    "-nodefaults",
+    "-proc gekko",
+    "-fp hard",
+    "-Cpp_exceptions off",
+    "-enum int",
+    "-warn pragmas",
+    "-requireprotos",
+    '-pragma "cats off"',
+    "-nosyspath",
+    "-i src/dolphin/include",
+    "-i src/dolphin/include/libc",
+    "-ir src/dolphin/src",
+    "-DRELEASE",
+]
+sdk_char_signed = ["-char signed"]
+
 # Runtime library flags (BFBB's and the later games'); its compiler is not known yet.
 cflags_runtime = [
     *cflags_base,
@@ -274,6 +296,17 @@ Equivalent = config.non_matching  # Object should be linked when configured with
 # Object is only matching for specific versions
 def MatchingFor(*versions):
     return config.version in versions
+
+
+# Helper function for Dolphin libraries
+def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
+    return {
+        "lib": lib_name,
+        "mw_version": "GC/1.2.5n",
+        "cflags": cflags_sdk,
+        "progress_category": "sdk",
+        "objects": objects,
+    }
 
 
 config.warn_missing_config = True
@@ -425,6 +458,33 @@ config.libs = [
             Object(NonMatching, "PowerPC_EABI_Support/Runtime/Src/global_destructor_chain.c"),
         ],
     },
+    DolphinLib(
+        "gx",
+        [
+            Object(Matching, "dolphin/src/gx/GXInit.c"),
+            Object(NonMatching, "dolphin/src/gx/GXFifo.c"),
+            Object(Matching, "dolphin/src/gx/GXAttr.c"),
+            Object(Matching, "dolphin/src/gx/GXMisc.c"),
+            Object(Matching, "dolphin/src/gx/GXGeometry.c"),
+            Object(Matching, "dolphin/src/gx/GXFrameBuf.c"),
+            Object(Matching, "dolphin/src/gx/GXLight.c"),
+            Object(Matching, "dolphin/src/gx/GXTexture.c"),
+            Object(Matching, "dolphin/src/gx/GXBump.c"),
+            Object(Matching, "dolphin/src/gx/GXTev.c"),
+            Object(Matching, "dolphin/src/gx/GXPixel.c"),
+            Object(Matching, "dolphin/src/gx/GXStubs.c"),
+            Object(Matching, "dolphin/src/gx/GXDisplayList.c"),
+            Object(Matching, "dolphin/src/gx/GXTransform.c"),
+            Object(Matching, "dolphin/src/gx/GXPerf.c"),
+        ],
+    ),
+    DolphinLib(
+        "mtx",
+        [
+            Object(Matching, "dolphin/src/mtx/mtx.c", extra_cflags=sdk_char_signed),
+            Object(Matching, "dolphin/src/mtx/mtx44.c", extra_cflags=sdk_char_signed),
+        ],
+    ),
 ]
 
 
