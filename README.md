@@ -1,10 +1,7 @@
 Scooby-Doo! Night of 100 Frights (GameCube)  
-[![Discord Badge]][discord] <!--[![Build Status]][actions] [![Code Progress]][progress] [![Data Progress]][progress]-->
+[![Build Status]][actions] <!--[![Code Progress]][progress] [![Data Progress]][progress]--> [![Discord Badge]][discord]
 =============
 
-<!--
-Build badge (hidden until CI exists)
--->
 [Build Status]: https://github.com/seilc/n100f/actions/workflows/build.yml/badge.svg
 [actions]: https://github.com/seilc/n100f/actions/workflows/build.yml
 <!--

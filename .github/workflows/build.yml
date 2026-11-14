@@ -1,0 +1,51 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    # Fork PRs get no secrets, so no image: skip them.
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    # Private build container with the original DOL and the compilers (seilc/n100f-build).
+    container:
+      image: ghcr.io/seilc/n100f-build:main
+      credentials:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GHCR_TOKEN }}
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: [GIHE78_00]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Git config
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Prepare
+        run: cp -a /orig .
+
+      # The default target (progress) depends on the SHA-1 check of the DOL.
+      - name: Build
+        run: |
+          python configure.py --map --version ${{ matrix.version }} \
+              --binutils /binutils --compilers /compilers
+          ninja all_source progress build/${{ matrix.version }}/report.json
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.version }}_report
+          path: build/${{ matrix.version }}/report.json

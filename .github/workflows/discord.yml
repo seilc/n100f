@@ -1,0 +1,84 @@
+name: Discord
+
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  notify:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Forward push event to Discord
+        env:
+          HOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::warning::No DISCORD_WEBHOOK secret, skipped"
+            exit 0
+          fi
+          curl -fsS -H "Content-Type: application/json" -H "X-GitHub-Event: push" \
+            --data-binary @"$GITHUB_EVENT_PATH" "$HOOK"
+
+  progress:
+    if: >-
+      github.event_name == 'workflow_run' && github.event.workflow_run.event == 'push'
+      && github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Download reports
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -p '*_report' -D cur
+          read -r prev prev_sha <<< "$(gh run list -R "$GITHUB_REPOSITORY" -w Build -b main -e push -L 20 \
+              --json databaseId,headSha,conclusion \
+              --jq "[.[] | select(.databaseId != $RUN_ID and .conclusion == \"success\")][0] // empty | \"\\(.databaseId) \\(.headSha)\"")"
+          if [ -n "$prev" ] && gh run download "$prev" -R "$GITHUB_REPOSITORY" -p '*_report' -D prev; then
+            echo "PREV=prev" >> "$GITHUB_ENV"
+            echo "PREV_SHA=$prev_sha" >> "$GITHUB_ENV"
+            commits=$(gh api "repos/$GITHUB_REPOSITORY/compare/$prev_sha...$HEAD_SHA" --jq .total_commits 2>/dev/null) || commits=
+            echo "COMMITS=$commits" >> "$GITHUB_ENV"
+          fi
+
+      - name: Draw treemap
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          python3 -m pip install --break-system-packages -q pillow==12.3.0
+          python3 .github/treemap.py cur treemap.png $PREV
+
+      - name: Post progress to Discord
+        env:
+          PUSHER: ${{ github.event.workflow_run.actor.login }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          HOOK: ${{ secrets.DISCORD_PROGRESS_WEBHOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::warning::No DISCORD_PROGRESS_WEBHOOK secret, skipped"
+            exit 0
+          fi
+          python3 .github/progress.py cur $PREV > payload.json
+          if [ ! -s payload.json ]; then
+            echo "No progress change, skipped"
+            exit 0
+          fi
+          if [ ! -s treemap.png ] || ! curl -fsS -F "payload_json=<payload.json" -F "files[0]=@treemap.png;type=image/png" "$HOOK"; then
+            curl -fsS -H "Content-Type: application/json" --data-binary @payload.json "$HOOK"
+          fi
