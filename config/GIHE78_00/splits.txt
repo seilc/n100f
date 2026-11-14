@@ -11,6 +11,398 @@ Sections:
 	.sdata2     type:rodata align:8
 	.sbss2      type:bss align:16
 
+SD2/Game/flat/iAnimSKB.cpp:
+	.text       start:0x80006318 end:0x800067D0
+
+SD2/Game/flat/iCamera.cpp:
+	.text       start:0x800072D4 end:0x8000755C
+
+SD2/Game/flat/iCollide.cpp:
+	.text       start:0x80007738 end:0x80009424
+
+SD2/Game/flat/iCollideFast.cpp:
+	.text       start:0x80009A1C end:0x80009A20
+
+SD2/Game/flat/iDebug.cpp:
+	.text       start:0x80009A20 end:0x80009CC0
+
+SD2/Game/flat/iDraw.cpp:
+	.text       start:0x80009CC0 end:0x80009CCC
+
+SD2/Game/flat/iEnv.cpp:
+	.text       start:0x8000A0D4 end:0x8000A49C
+
+SD2/Game/flat/iFile.cpp:
+	.text       start:0x8000A49C end:0x8000AB58
+
+SD2/Game/flat/iFont.cpp:
+	.text       start:0x8000AB58 end:0x8000AC1C
+
+SD2/Game/flat/iLight.cpp:
+	.text       start:0x8000B9C4 end:0x8000BD14
+
+SD2/Game/flat/iMath.cpp:
+	.text       start:0x8000BD14 end:0x8000BDC0
+
+SD2/Game/flat/iMath3.cpp:
+	.text       start:0x8000C7FC end:0x8000DA6C
+
+SD2/Game/flat/iMemMgr.cpp:
+	.text       start:0x8000DA6C end:0x8000DAA8
+
+SD2/Game/flat/iModel.cpp:
+	.text       start:0x8000DBA4 end:0x8000E994
+
+SD2/Game/flat/iMorph.cpp:
+	.text       start:0x8000EBC0 end:0x8000F5AC
+
+SD2/Game/flat/iPad.cpp:
+	.text       start:0x8000F5AC end:0x8000FB40
+
+SD2/Game/flat/iParMgr.cpp:
+	.text       start:0x800103C4 end:0x80011B34
+
+SD2/Game/flat/isavegame.cpp:
+	.text       start:0x80011C98 end:0x80014644
+
+SD2/Game/flat/iScrFX.cpp:
+	.text       start:0x80014904 end:0x800149F0
+
+SD2/Game/flat/iShadow.cpp:
+	.text       start:0x80014C84 end:0x80015168
+
+SD2/Game/flat/iSystem.cpp:
+	.text       start:0x80016584 end:0x80016600
+
+SD2/Game/flat/iTime.cpp:
+	.text       start:0x80016920 end:0x80016A30
+
+SD2/Game/flat/xAnim.cpp:
+	.text       start:0x80016CA8 end:0x8001C088
+
+SD2/Game/flat/xBase.cpp:
+	.text       start:0x8001C088 end:0x8001C184
+
+SD2/Game/flat/xbinio.cpp:
+	.text       start:0x8001C184 end:0x8001D1F8
+
+SD2/Game/flat/xBound.cpp:
+	.text       start:0x8001D1F8 end:0x8001D9A0
+
+SD2/Game/flat/xCamera.cpp:
+	.text       start:0x8001D9A0 end:0x8002086C
+
+SD2/Game/flat/xClimate.cpp:
+	.text       start:0x8002086C end:0x80020F08
+
+SD2/Game/flat/xCollide.cpp:
+	.text       start:0x80020F08 end:0x80021620
+
+SD2/Game/flat/xCollideFast.cpp:
+	.text       start:0x80021620 end:0x80021B10
+
+SD2/Game/flat/xDebug.cpp:
+	.text       start:0x80021B18 end:0x80021CB0
+
+SD2/Game/flat/xDraw.cpp:
+	.text       start:0x80021D50 end:0x80021E70
+
+SD2/Game/flat/xEnt.cpp:
+	.text       start:0x80021E70 end:0x800258F4
+
+SD2/Game/flat/xEntDrive.cpp:
+	.text       start:0x800258F4 end:0x80025F04
+
+SD2/Game/flat/xEntMotion.cpp:
+	.text       start:0x80025F04 end:0x80028D18
+
+SD2/Game/flat/xEnv.cpp:
+	.text       start:0x80028D18 end:0x80028DFC
+
+SD2/Game/flat/xFFX.cpp:
+	.text       start:0x80028DFC end:0x80029458
+
+SD2/Game/flat/xFont.cpp:
+	.text       start:0x800294E8 end:0x8002A460
+
+SD2/Game/flat/xFX.cpp:
+	.text       start:0x8002A5F4 end:0x8002B4D8
+
+SD2/Game/flat/xhipio.cpp:
+	.text       start:0x8002B98C end:0x8002C100
+
+SD2/Game/flat/xIni.cpp:
+	.text       start:0x8002C100 end:0x8002C774
+
+SD2/Game/flat/xLinkList.cpp:
+	.text       start:0x8002C774 end:0x8002C86C
+
+SD2/Game/flat/xMath.cpp:
+	.text       start:0x8002C8C4 end:0x8002CF48
+
+SD2/Game/flat/xMath3.cpp:
+	.text       start:0x8002CF48 end:0x8002F8E0
+
+SD2/Game/flat/xMemMgr.cpp:
+	.text       start:0x8002F920 end:0x800300A4
+
+SD2/Game/flat/xModel.cpp:
+	.text       start:0x800300A8 end:0x80030E0C
+
+SD2/Game/flat/xMorph.cpp:
+	.text       start:0x80030F28 end:0x80031310
+
+SD2/Game/flat/xMovePoint.cpp:
+	.text       start:0x80031310 end:0x800317D4
+
+SD2/Game/flat/xordarray.cpp:
+	.text       start:0x8003189C end:0x80031A20
+
+SD2/Game/flat/xPad.cpp:
+	.text       start:0x80031AC8 end:0x800323D4
+
+SD2/Game/flat/xPar.cpp:
+	.text       start:0x800323D4 end:0x80032540
+
+SD2/Game/flat/xParGroup.cpp:
+	.text       start:0x80032540 end:0x80032D28
+
+SD2/Game/flat/xParMgr.cpp:
+	.text       start:0x80032D28 end:0x80032DEC
+
+SD2/Game/flat/xPartition.cpp:
+	.text       start:0x80032DEC end:0x8003361C
+
+SD2/Game/flat/xpkrsvc.cpp:
+	.text       start:0x80033620 end:0x80035854
+
+SD2/Game/flat/xQuickCull.cpp:
+	.text       start:0x800367E0 end:0x80036908
+
+SD2/Game/flat/xsavegame.cpp:
+	.text       start:0x80036908 end:0x80038D48
+
+SD2/Game/flat/xScene.cpp:
+	.text       start:0x80038D48 end:0x800394B4
+
+SD2/Game/flat/xScrFx.cpp:
+	.text       start:0x800394B4 end:0x80039C90
+
+SD2/Game/flat/xserializer.cpp:
+	.text       start:0x80039C90 end:0x8003AD40
+
+SD2/Game/flat/xShadow.cpp:
+	.text       start:0x8003C81C end:0x8003CBD8
+
+SD2/Game/flat/xSnd.cpp:
+	.text       start:0x8003CD24 end:0x8003D5C0
+
+SD2/Game/flat/xSpline.cpp:
+	.text       start:0x8003D86C end:0x8003F904
+
+SD2/Game/flat/xstransvc.cpp:
+	.text       start:0x8003F904 end:0x80040978
+
+SD2/Game/flat/xString.cpp:
+	.text       start:0x80040978 end:0x80040EE4
+
+SD2/Game/flat/xSurface.cpp:
+	.text       start:0x80040EE4 end:0x80040FCC
+
+SD2/Game/flat/xTRC.cpp:
+	.text       start:0x80044714 end:0x80044780
+
+SD2/Game/flat/xutil.cpp:
+	.text       start:0x80044780 end:0x80044BCC
+
+SD2/Game/flat/zActionLine.cpp:
+	.text       start:0x80044D50 end:0x80044E20
+
+SD2/Game/flat/zAnimList.cpp:
+	.text       start:0x80044E20 end:0x80045174
+
+SD2/Game/flat/zAssetTypes.cpp:
+	.text       start:0x800451D4 end:0x80045B28
+
+SD2/Game/flat/zCamera.cpp:
+	.text       start:0x80045B50 end:0x80045C34
+
+SD2/Game/flat/zConditional.cpp:
+	.text       start:0x80045C34 end:0x80045EA8
+
+SD2/Game/flat/zCounter.cpp:
+	.text       start:0x80045EA8 end:0x800460E0
+
+SD2/Game/flat/zCutsceneMgr.cpp:
+	.text       start:0x800460E0 end:0x8004651C
+
+SD2/Game/flat/zDispatcher.cpp:
+	.text       start:0x80047494 end:0x80047670
+
+SD2/Game/flat/zEGenerator.cpp:
+	.text       start:0x80047670 end:0x80048094
+
+SD2/Game/flat/zEnt.cpp:
+	.text       start:0x80048094 end:0x80049008
+
+SD2/Game/flat/zEntBubble.cpp:
+	.text       start:0x80049488 end:0x8004A508
+
+SD2/Game/flat/zEntButton.cpp:
+	.text       start:0x8004A508 end:0x8004AAD4
+
+SD2/Game/flat/zEntDestructObj.cpp:
+	.text       start:0x8004AAD4 end:0x8004B0BC
+
+SD2/Game/flat/zEntHangable.cpp:
+	.text       start:0x8004B0BC end:0x8004C83C
+
+SD2/Game/flat/zEntPickup.cpp:
+	.text       start:0x8004C83C end:0x8004FD58
+
+SD2/Game/flat/zEntPlayer.cpp:
+	.text       start:0x8004FD58 end:0x800691A8
+	.ctors      start:0x8018E5C0 end:0x8018E5C4
+
+SD2/Game/flat/zEntProjectile.cpp:
+	.text       start:0x80069F78 end:0x8006D398
+
+SD2/Game/flat/zEntShaggy.cpp:
+	.text       start:0x8006E584 end:0x8007A8D0
+	.ctors      start:0x8018E5C4 end:0x8018E5C8
+
+SD2/Game/flat/zEntSimpleObj.cpp:
+	.text       start:0x8007AAFC end:0x8007ACB8
+
+SD2/Game/flat/zEntTrigger.cpp:
+	.text       start:0x8007ACB8 end:0x8007B08C
+
+SD2/Game/flat/zEntVillain.cpp:
+	.text       start:0x8007BC1C end:0x800A9CE4
+
+SD2/Game/flat/zEnv.cpp:
+	.text       start:0x800A9F78 end:0x800AA338
+
+SD2/Game/flat/zFeet.cpp:
+	.text       start:0x800AA338 end:0x800ABD84
+
+SD2/Game/flat/zFMV.cpp:
+	.text       start:0x800ABD84 end:0x800ABD9C
+
+SD2/Game/flat/zFog.cpp:
+	.text       start:0x800ABE8C end:0x800AC010
+
+SD2/Game/flat/zFX.cpp:
+	.text       start:0x800AC010 end:0x800AC0BC
+
+SD2/Game/flat/zGame.cpp:
+	.text       start:0x800AC728 end:0x800ADC40
+
+SD2/Game/flat/zGameExtras.cpp:
+	.text       start:0x800ADC40 end:0x800AEF54
+
+SD2/Game/flat/zGameState.cpp:
+	.text       start:0x800AF8D8 end:0x800AFD6C
+
+SD2/Game/flat/zGroup.cpp:
+	.text       start:0x800AFD6C end:0x800AFF5C
+
+SD2/Game/flat/zGust.cpp:
+	.text       start:0x800AFF5C end:0x800B07B4
+
+SD2/Game/flat/zHologram.cpp:
+	.text       start:0x800B07B4 end:0x800B09C8
+
+SD2/Game/flat/zHud.cpp:
+	.text       start:0x800B0CF4 end:0x800B9808
+	.ctors      start:0x8018E5C8 end:0x8018E5CC
+
+SD2/Game/flat/zLaugh.cpp:
+	.text       start:0x800B9808 end:0x800B9AB0
+
+SD2/Game/flat/zLight.cpp:
+	.text       start:0x800B9AB0 end:0x800BA800
+
+SD2/Game/flat/zLightEffect.cpp:
+	.text       start:0x800BA800 end:0x800BAE00
+
+SD2/Game/flat/zLightning.cpp:
+	.text       start:0x800BAE00 end:0x800BBAF4
+
+SD2/Game/flat/zLobMaster.cpp:
+	.text       start:0x800BBB1C end:0x800BE608
+
+SD2/Game/flat/zMain.cpp:
+	.text       start:0x800BE88C end:0x800BF644
+
+SD2/Game/flat/zMenu.cpp:
+	.text       start:0x800BF644 end:0x800BFD30
+
+SD2/Game/flat/zMovePoint.cpp:
+	.text       start:0x800BFED4 end:0x800C0524
+
+SD2/Game/flat/zMusic.cpp:
+	.text       start:0x800C0524 end:0x800C2EB0
+
+SD2/Game/flat/zParCmd.cpp:
+	.text       start:0x800C30D8 end:0x800C4BE0
+
+SD2/Game/flat/zParEmitter.cpp:
+	.text       start:0x800C4BE0 end:0x800C6708
+
+SD2/Game/flat/zParSys.cpp:
+	.text       start:0x800C6708 end:0x800C6FE0
+
+SD2/Game/flat/zPendulum.cpp:
+	.text       start:0x800C7204 end:0x800C751C
+
+SD2/Game/flat/zPlatform.cpp:
+	.text       start:0x800C7AA4 end:0x800C8AE4
+
+SD2/Game/flat/zPortal.cpp:
+	.text       start:0x800C8AE4 end:0x800C8BDC
+
+SD2/Game/flat/zRenderState.cpp:
+	.text       start:0x800C8C44 end:0x800C90D4
+
+SD2/Game/flat/zRumble.cpp:
+	.text       start:0x800C90D4 end:0x800C9368
+
+SD2/Game/flat/zSaveLoad.cpp:
+	.text       start:0x800C9738 end:0x800CD254
+
+SD2/Game/flat/zScene.cpp:
+	.text       start:0x800CD2D8 end:0x800D1B20
+	.ctors      start:0x8018E5CC end:0x8018E5D0
+
+SD2/Game/flat/zScript.cpp:
+	.text       start:0x800D1C94 end:0x800D1E50
+
+SD2/Game/flat/zSFX.cpp:
+	.text       start:0x800D1E50 end:0x800D229C
+
+SD2/Game/flat/zSurface.cpp:
+	.text       start:0x800D229C end:0x800D340C
+
+SD2/Game/flat/zTimer.cpp:
+	.text       start:0x800D340C end:0x800D3608
+
+SD2/Game/flat/zUI.cpp:
+	.text       start:0x800D3608 end:0x800D47E8
+	.ctors      start:0x8018E5D0 end:0x8018E5D4
+
+SD2/Game/flat/zUIFont.cpp:
+	.text       start:0x800D47E8 end:0x800D527C
+
+SD2/Game/flat/zVar.cpp:
+	.text       start:0x800D527C end:0x800D7E00
+
+SD2/Game/flat/iAnim.cpp:
+	.text       start:0x800D8454 end:0x800D84A0
+
+SD2/Game/flat/iSnd.cpp:
+	.text       start:0x800D955C end:0x800DB6F8
+
 PowerPC_EABI_Support/Runtime/Src/global_destructor_chain.c:
 	.text       start:0x800E5774 end:0x800E57BC
 	.dtors      start:0x8018E5E0 end:0x8018E5E4
