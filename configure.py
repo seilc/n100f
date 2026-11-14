@@ -231,20 +231,37 @@ elif args.warn == "error":
     cflags_base.append("-W error")
 
 # Game code flags: CW GC 1.3.2 (Scooby's game code compiler). BFBB's game code flags
-# (its configure.py), with which BFBB's units reproduce the most Scooby functions, minus
-# `-pragma "cpp_extensions on"` and `-gccinc` (set for BFBB's own source; open for
-# Scooby). The first matched units decide Scooby's own.
+# (its configure.py) minus `-pragma "cpp_extensions on"` and `-gccinc` (set for BFBB's own
+# source; open for Scooby), and `-str reuse,readonly` without `pool` (more Scooby functions
+# reproduced without it).
 cflags_game = [
     *cflags_base,
     "-lang=c++",
     "-common on",
     "-char unsigned",
-    "-str reuse,pool,readonly",
+    "-str reuse,readonly",
     "-use_lmw_stmw on",
-    "-inline off",
+    "-inline off,deferred",
+    "-i src/dolphin/include",
+    "-i src/dolphin/include/libc",
+    "-i src/SD2/Game/flat",
+    "-prefix prefix.mch",
 ]
 
 config.linker_version = "GC/1.3.2"
+
+# Game code prefix: include/prefix.pch++, precompiled with the game flags into
+# build/<version>/include/prefix.mch (found through -i build/<version>/include) and passed to
+# every game unit with -prefix (cflags_game).
+config.precompiled_headers = [
+    {
+        "source": "prefix.pch++",
+        "mw_version": "GC/1.3.2",
+        "cflags": [f for f in cflags_game if f != "-prefix prefix.mch"],
+    }
+]
+# decomp.me contexts read the prefix header itself (scratches can't use the .mch).
+config.context_prefixes = {"prefix.mch": Path("include/prefix.pch++")}
 
 # Dolphin SDK flags (dolsdk2001-dec's Makefile, release libraries; Dec 17 2001 SDK).
 cflags_sdk = [
@@ -383,7 +400,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xSpline.cpp"),
             Object(NonMatching, "SD2/Game/flat/xstransvc.cpp"),
             Object(NonMatching, "SD2/Game/flat/xString.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xSurface.cpp"),
+            Object(Matching, "SD2/Game/flat/xSurface.cpp"),
             Object(NonMatching, "SD2/Game/flat/xTRC.cpp"),
             Object(NonMatching, "SD2/Game/flat/xutil.cpp"),
             Object(NonMatching, "SD2/Game/flat/zActionLine.cpp"),

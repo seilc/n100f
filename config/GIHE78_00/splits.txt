@@ -208,6 +208,7 @@ SD2/Game/flat/xString.cpp:
 
 SD2/Game/flat/xSurface.cpp:
 	.text       start:0x80040EE4 end:0x80040FCC
+	.sbss       start:0x8025EBD0 end:0x8025EBD8
 
 SD2/Game/flat/xTRC.cpp:
 	.text       start:0x80040FCC end:0x80044780
