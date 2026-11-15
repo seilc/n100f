@@ -386,7 +386,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xModel.cpp"),
             Object(NonMatching, "SD2/Game/flat/xMorph.cpp"),
             Object(NonMatching, "SD2/Game/flat/xMovePoint.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xordarray.cpp"),
+            Object(Matching, "SD2/Game/flat/xordarray.cpp"),
             Object(NonMatching, "SD2/Game/flat/xPad.cpp"),
             Object(Matching, "SD2/Game/flat/xPar.cpp"),
             Object(NonMatching, "SD2/Game/flat/xParGroup.cpp"),

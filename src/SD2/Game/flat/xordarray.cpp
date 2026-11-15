@@ -1,0 +1,105 @@
+#include "xCommon.h"
+#include "xordarray.h"
+
+#include "xMath.h"
+#include "xMemMgr.h"
+
+void XOrdInit(st_XORDEREDARRAY* array, S32 max)
+{
+    array->list = (void**)xMemAlloc(gActiveHeap, max * sizeof(void*));
+    array->cnt = 0;
+    array->max = max;
+    array->warnlvl = 0.95f * max;
+    if (array->warnlvl == array->max) {
+        array->warnlvl = MAX(0, array->max-1);
+    }
+}
+
+void XOrdDone(st_XORDEREDARRAY* array)
+{
+    array->list = NULL;
+    array->cnt = 0;
+    array->max = 0;
+    array->warnlvl = 0;
+}
+
+void XOrdAppend(st_XORDEREDARRAY* array, void* elt)
+{
+    if (array->cnt >= array->max) {
+        return;
+    }
+
+    array->list[array->cnt++] = elt;
+}
+
+void XOrdInsert(st_XORDEREDARRAY* array, void* elt, XOrdCompareCallback compare)
+{
+    S32 i = 0;
+
+    if (array->cnt >= array->max) {
+        return;
+    }
+
+    array->cnt++;
+
+    for (i = array->cnt-1; i > 0; i--) {
+        if (compare(array->list[i-1], elt) <= 0) {
+            array->list[i] = elt;
+            return;
+        } else {
+            array->list[i] = array->list[i-1];
+        }
+    }
+
+    array->list[0] = elt;
+}
+
+S32 XOrdLookup(st_XORDEREDARRAY* array, const void* key, XOrdTestCallback test)
+{
+    S32 da_idx = -1;
+    S32 k0 = 0;
+    S32 k1 = 0, k = 0, v = 0;
+
+    k0 = 0;
+    k1 = array->cnt;
+    while (k1 > k0) {
+        k = (k0 + k1) / 2;
+        v = test(key, array->list[k]);
+        if (v == 0) {
+            da_idx = k;
+            break;
+        }
+        if (v > 0) k0 = k + 1;
+        else k1 = k;
+    }
+
+    return da_idx;
+}
+
+void XOrdSort(st_XORDEREDARRAY* array, XOrdCompareCallback test)
+{
+    void** list = array->list;
+    S32 num = array->cnt;
+    S32 i = 0;
+    S32 j = 0;
+    S32 h = 0;
+    void* v = NULL;
+
+    h = 1;
+    while (h <= num) h = h*3+1;
+    while (h != 1) {
+        h /= 3;
+        // BUG: list[0] is never sorted
+        for (i = h+1; i < num; i++) {
+            v = list[i]; j = i;
+            while (test(list[j-h], v) > 0) {
+                list[j] = list[j-h];
+                j -= h;
+                if (j <= h) {
+                    break;
+                }
+            }
+            list[j] = v;
+        }
+    }
+}
