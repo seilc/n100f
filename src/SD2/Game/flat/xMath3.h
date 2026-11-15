@@ -85,6 +85,11 @@ inline void xVec3Add(xVec3* o, const xVec3* a, const xVec3* b)
     o->x = a->x + b->x, o->y = a->y + b->y, o->z = a->z + b->z;
 }
 
+inline void xVec3Sub(xVec3* o, const xVec3* a, const xVec3* b)
+{
+    o->x = a->x - b->x, o->y = a->y - b->y, o->z = a->z - b->z;
+}
+
 inline void xVec3SMul(xVec3* o, const xVec3* v, F32 s)
 {
     o->x = v->x * s, o->y = v->y * s, o->z = v->z * s;
@@ -112,5 +117,13 @@ do {                                                                            
     }                                                                                                                                               \
     (ln).p2.x = (ln).p1.x + (ln).p2.x, (ln).p2.y = (ln).p1.y + (ln).p2.y, (ln).p2.z = (ln).p1.z + (ln).p2.z;                                        \
 } while (0)
+
+F32 xVec3Normalize(xVec3* o, const xVec3* v);
+
+inline F32 xVec3Hdng(xVec3* hdng, const xVec3* a, const xVec3* b)
+{
+    xVec3Sub(hdng, b, a);
+    return xVec3Normalize(hdng, hdng);
+}
 
 #endif

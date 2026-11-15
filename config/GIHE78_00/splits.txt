@@ -162,6 +162,7 @@ SD2/Game/flat/xMorph.cpp:
 
 SD2/Game/flat/xMovePoint.cpp:
 	.text       start:0x80031310 end:0x800317D4
+	.sdata2     start:0x802600E0 end:0x802600EC
 
 SD2/Game/flat/xordarray.cpp:
 	.text       start:0x800317D4 end:0x80031AC8

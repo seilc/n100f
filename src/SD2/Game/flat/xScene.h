@@ -40,4 +40,6 @@ typedef struct _xScene
     xSceneID2NameCallback id2Name;
 } xScene;
 
+xBase* xSceneResolvID(xScene* sc, U32 id);
+
 #endif
