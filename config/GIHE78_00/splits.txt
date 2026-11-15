@@ -206,7 +206,7 @@ SD2/Game/flat/xserializer.cpp:
 	.text       start:0x80039C90 end:0x8003AD40
 
 SD2/Game/flat/xShadow.cpp:
-	.text       start:0x8003C81C end:0x8003CBD8
+	.text       start:0x8003AD40 end:0x8003CD24
 
 SD2/Game/flat/xSnd.cpp:
 	.text       start:0x8003CD24 end:0x8003D5C0
