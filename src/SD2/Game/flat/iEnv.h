@@ -15,4 +15,9 @@ struct iEnv
     S32 memlvl;
 };
 
+void iEnvLoad(iEnv* env, const void* data, U32, S32 dataType);
+void iEnvFree(iEnv* env);
+void iEnvDefaultLighting(iEnv*);
+void iEnvRender(iEnv* env);
+
 #endif

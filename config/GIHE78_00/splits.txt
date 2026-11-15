@@ -120,6 +120,7 @@ SD2/Game/flat/xEntMotion.cpp:
 
 SD2/Game/flat/xEnv.cpp:
 	.text       start:0x80028D18 end:0x80028DFC
+	.sbss       start:0x8025EA48 end:0x8025EA4C
 
 SD2/Game/flat/xFFX.cpp:
 	.text       start:0x80028DFC end:0x80029458
