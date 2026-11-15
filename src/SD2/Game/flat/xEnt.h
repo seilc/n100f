@@ -20,6 +20,14 @@ typedef void(*xEntBoundUpdateCallback)(xEnt*, xVec3*);
 typedef void(*xEntMoveCallback)(xEnt*, xScene*, F32, xEntFrame*);
 typedef void(*xEntRenderCallback)(xEnt*);
 
+// xEnt::collLev
+#define k_XENT_COLLLEV_FASTEST 0
+#define k_XENT_COLLLEV_AABB 1
+#define k_XENT_COLLLEV_SPH 2
+#define k_XENT_COLLLEV_OBB 3
+#define k_XENT_COLLLEV_BOUND 4
+#define k_XENT_COLLLEV_MODEL 5
+
 typedef struct _xEnt : xBase
 {
     xEntAsset* asset;

@@ -2,6 +2,7 @@
 #define XMATH3_H
 
 #include "iMath3.h"
+#include "xMath.h"
 
 typedef struct _xVec3
 {
@@ -12,6 +13,16 @@ typedef struct _xVec4
 {
     F32 x, y, z, w;
 } xVec4;
+
+typedef struct _xMat3x3
+{
+    xVec3 right;
+    S32 flags;
+    xVec3 up;
+    U32 pad1;
+    xVec3 at;
+    U32 pad2;
+} xMat3x3;
 
 typedef struct _xMat4x3
 {
@@ -75,6 +86,17 @@ typedef struct _xRay3
     S32 flags;
 } xRay3;
 
+typedef struct _xIsect
+{
+    U32 flags;
+    F32 penned;
+    F32 contained;
+    F32 lapped;
+    xVec3 point;
+    xVec3 norm;
+    F32 dist;
+} xIsect;
+
 inline void xVec3Init(xVec3* v, F32 _x, F32 _y, F32 _z)
 {
     v->x = _x, v->y = _y, v->z = _z;
@@ -93,6 +115,16 @@ inline void xVec3Sub(xVec3* o, const xVec3* a, const xVec3* b)
 inline void xVec3SMul(xVec3* o, const xVec3* v, F32 s)
 {
     o->x = v->x * s, o->y = v->y * s, o->z = v->z * s;
+}
+
+inline F32 xVec3Dot(const xVec3* a, const xVec3* b)
+{
+    return a->x * b->x + a->y * b->y + a->z * b->z;
+}
+
+inline F32 xVec3Length(const xVec3* v)
+{
+    return xsqrt(v->x * v->x + v->y * v->y + v->z * v->z);
 }
 
 #define xLine3FromRay(ln, r)                                                                                                                        \
@@ -124,6 +156,15 @@ inline F32 xVec3Hdng(xVec3* hdng, const xVec3* a, const xVec3* b)
 {
     xVec3Sub(hdng, b, a);
     return xVec3Normalize(hdng, hdng);
+}
+
+void xMat3x3Normalize(xMat3x3* o, const xMat3x3* m);
+void xMat3x3Tolocal(xVec3* o, const xMat3x3* m, const xVec3* v);
+
+inline void xMat4x3ToLocal(xVec3* o, const xMat4x3* m, const xVec3* v)
+{
+    o->x = v->x - m->pos.x, o->y = v->y - m->pos.y, o->z = v->z - m->pos.z;
+    xMat3x3Tolocal(o, (const xMat3x3*)m, o);
 }
 
 #endif
