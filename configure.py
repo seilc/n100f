@@ -233,12 +233,12 @@ elif args.warn == "error":
 # Game code flags: CW GC 1.3.2 (Scooby's game code compiler). BFBB's game code flags
 # (its configure.py) minus `-pragma "cpp_extensions on"` and `-gccinc` (set for BFBB's own
 # source; open for Scooby), and `-str reuse,readonly` without `pool` (more Scooby functions
-# reproduced without it). Unlike BFBB: `-char signed` (Scooby sign-extends chars) and `-O4,s`
-# (lmw/stmw for two registers).
+# reproduced without it). Unlike BFBB: `-char signed` (Scooby sign-extends chars), `-O4,s`
+# (lmw/stmw for two registers) and `-common off` (xPar's gParPool sits in its object's .bss).
 cflags_game = [
     *cflags_base,
     "-lang=c++",
-    "-common on",
+    "-common off",
     "-char signed",
     "-str reuse,readonly",
     "-use_lmw_stmw on",
@@ -388,7 +388,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xMovePoint.cpp"),
             Object(NonMatching, "SD2/Game/flat/xordarray.cpp"),
             Object(NonMatching, "SD2/Game/flat/xPad.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xPar.cpp"),
+            Object(Matching, "SD2/Game/flat/xPar.cpp"),
             Object(NonMatching, "SD2/Game/flat/xParGroup.cpp"),
             Object(Matching, "SD2/Game/flat/xParMgr.cpp"),
             Object(NonMatching, "SD2/Game/flat/xPartition.cpp"),

@@ -167,6 +167,9 @@ SD2/Game/flat/xPad.cpp:
 
 SD2/Game/flat/xPar.cpp:
 	.text       start:0x800323D4 end:0x80032540
+	.bss        start:0x802001A8 end:0x802272A8
+	.sbss       start:0x8025EAD8 end:0x8025EADC
+	.sdata2     start:0x80260110 end:0x80260114
 
 SD2/Game/flat/xParGroup.cpp:
 	.text       start:0x80032540 end:0x80032D28
