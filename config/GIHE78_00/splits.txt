@@ -105,6 +105,9 @@ SD2/Game/flat/xCollideFast.cpp:
 
 SD2/Game/flat/xDebug.cpp:
 	.text       start:0x80021B18 end:0x80021CB0
+	.data       start:0x801AE778 end:0x801AE858
+	.bss        start:0x801FE448 end:0x801FE5B8
+	.sbss       start:0x8025E9F8 end:0x8025EA00
 
 SD2/Game/flat/xDraw.cpp:
 	.text       start:0x80021CB0 end:0x80021E70
