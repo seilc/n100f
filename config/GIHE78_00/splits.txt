@@ -12,10 +12,10 @@ Sections:
 	.sbss2      type:bss align:16
 
 SD2/Game/flat/iAnimSKB.cpp:
-	.text       start:0x80006318 end:0x800067D0
+	.text       start:0x80005C74 end:0x80006CC4
 
 SD2/Game/flat/iCamera.cpp:
-	.text       start:0x800072D4 end:0x8000755C
+	.text       start:0x80006CC4 end:0x80007738
 
 SD2/Game/flat/iCollide.cpp:
 	.text       start:0x80007738 end:0x80009424
@@ -38,7 +38,7 @@ SD2/Game/flat/iFile.cpp:
 	.text       start:0x8000A49C end:0x8000AB58
 
 SD2/Game/flat/iFont.cpp:
-	.text       start:0x8000AB58 end:0x8000AC1C
+	.text       start:0x8000AB58 end:0x8000B9C4
 
 SD2/Game/flat/iLight.cpp:
 	.text       start:0x8000B9C4 end:0x8000BD14
@@ -47,37 +47,37 @@ SD2/Game/flat/iMath.cpp:
 	.text       start:0x8000BD14 end:0x8000BDC0
 
 SD2/Game/flat/iMath3.cpp:
-	.text       start:0x8000C7FC end:0x8000DA6C
+	.text       start:0x8000BDC0 end:0x8000DA6C
 
 SD2/Game/flat/iMemMgr.cpp:
-	.text       start:0x8000DA6C end:0x8000DAA8
+	.text       start:0x8000DA6C end:0x8000DBA4
 
 SD2/Game/flat/iModel.cpp:
-	.text       start:0x8000DBA4 end:0x8000E994
+	.text       start:0x8000DBA4 end:0x8000EB64
 
 SD2/Game/flat/iMorph.cpp:
-	.text       start:0x8000EBC0 end:0x8000F5AC
+	.text       start:0x8000EB64 end:0x8000F5AC
 
 SD2/Game/flat/iPad.cpp:
 	.text       start:0x8000F5AC end:0x8000FB40
 
 SD2/Game/flat/iParMgr.cpp:
-	.text       start:0x800103C4 end:0x80011B34
+	.text       start:0x8000FB40 end:0x80011B74
 
 SD2/Game/flat/isavegame.cpp:
-	.text       start:0x80011C98 end:0x80014644
+	.text       start:0x80011B74 end:0x80014644
 
 SD2/Game/flat/iScrFX.cpp:
-	.text       start:0x80014904 end:0x800149F0
+	.text       start:0x800146C0 end:0x800149F0
 
 SD2/Game/flat/iShadow.cpp:
-	.text       start:0x80014C84 end:0x80015168
+	.text       start:0x80014A3C end:0x80015168
 
 SD2/Game/flat/iSystem.cpp:
-	.text       start:0x80016584 end:0x80016600
+	.text       start:0x800154C8 end:0x80016898
 
 SD2/Game/flat/iTime.cpp:
-	.text       start:0x80016920 end:0x80016A30
+	.text       start:0x800168F4 end:0x80016A30
 
 SD2/Game/flat/xAnim.cpp:
 	.text       start:0x80016CA8 end:0x8001C088
@@ -136,7 +136,7 @@ SD2/Game/flat/xFX.cpp:
 	.text       start:0x8002A5F4 end:0x8002B4D8
 
 SD2/Game/flat/xhipio.cpp:
-	.text       start:0x8002B98C end:0x8002C100
+	.text       start:0x8002B4D8 end:0x8002C100
 
 SD2/Game/flat/xIni.cpp:
 	.text       start:0x8002C100 end:0x8002C774
@@ -145,16 +145,16 @@ SD2/Game/flat/xLinkList.cpp:
 	.text       start:0x8002C774 end:0x8002C86C
 
 SD2/Game/flat/xMath.cpp:
-	.text       start:0x8002C8C4 end:0x8002CF48
+	.text       start:0x8002C86C end:0x8002CF48
 
 SD2/Game/flat/xMath3.cpp:
-	.text       start:0x8002CF48 end:0x8002F8E0
+	.text       start:0x8002CF48 end:0x8002F920
 
 SD2/Game/flat/xMemMgr.cpp:
-	.text       start:0x8002F920 end:0x800300A4
+	.text       start:0x8002F920 end:0x800300A8
 
 SD2/Game/flat/xModel.cpp:
-	.text       start:0x800300A8 end:0x80030E0C
+	.text       start:0x800300A8 end:0x80030F28
 
 SD2/Game/flat/xMorph.cpp:
 	.text       start:0x80030F28 end:0x80031310
@@ -187,7 +187,7 @@ SD2/Game/flat/xPartition.cpp:
 	.text       start:0x80032DEC end:0x8003361C
 
 SD2/Game/flat/xpkrsvc.cpp:
-	.text       start:0x80033620 end:0x80035854
+	.text       start:0x8003361C end:0x80035854
 
 SD2/Game/flat/xQuickCull.cpp:
 	.text       start:0x80035854 end:0x80036908
@@ -210,7 +210,7 @@ SD2/Game/flat/xShadow.cpp:
 	.text       start:0x8003AD40 end:0x8003CD24
 
 SD2/Game/flat/xSnd.cpp:
-	.text       start:0x8003CD24 end:0x8003D5C0
+	.text       start:0x8003CD24 end:0x8003D680
 
 SD2/Game/flat/xSpline.cpp:
 	.text       start:0x8003D86C end:0x8003F904
@@ -232,13 +232,13 @@ SD2/Game/flat/xutil.cpp:
 	.text       start:0x80044780 end:0x80044BCC
 
 SD2/Game/flat/zActionLine.cpp:
-	.text       start:0x80044D50 end:0x80044E20
+	.text       start:0x80044BCC end:0x80044E20
 
 SD2/Game/flat/zAnimList.cpp:
 	.text       start:0x80044E20 end:0x80045174
 
 SD2/Game/flat/zAssetTypes.cpp:
-	.text       start:0x800451D4 end:0x80045B28
+	.text       start:0x800451D4 end:0x80045B50
 
 SD2/Game/flat/zCamera.cpp:
 	.text       start:0x80045B50 end:0x80045C34
@@ -253,16 +253,16 @@ SD2/Game/flat/zCutsceneMgr.cpp:
 	.text       start:0x800460E0 end:0x8004651C
 
 SD2/Game/flat/zDispatcher.cpp:
-	.text       start:0x80047494 end:0x80047670
+	.text       start:0x8004651C end:0x80047670
 
 SD2/Game/flat/zEGenerator.cpp:
 	.text       start:0x80047670 end:0x80048094
 
 SD2/Game/flat/zEnt.cpp:
-	.text       start:0x80048094 end:0x80049008
+	.text       start:0x80048094 end:0x8004945C
 
 SD2/Game/flat/zEntBubble.cpp:
-	.text       start:0x80049488 end:0x8004A508
+	.text       start:0x80049478 end:0x8004A508
 
 SD2/Game/flat/zEntButton.cpp:
 	.text       start:0x8004A508 end:0x8004AAD4
@@ -281,20 +281,20 @@ SD2/Game/flat/zEntPlayer.cpp:
 	.ctors      start:0x8018E5C0 end:0x8018E5C4
 
 SD2/Game/flat/zEntProjectile.cpp:
-	.text       start:0x80069F78 end:0x8006D398
+	.text       start:0x800691A8 end:0x8006D624
 
 SD2/Game/flat/zEntShaggy.cpp:
-	.text       start:0x8006E584 end:0x8007A8D0
+	.text       start:0x8006D624 end:0x8007A8D0
 	.ctors      start:0x8018E5C4 end:0x8018E5C8
 
 SD2/Game/flat/zEntSimpleObj.cpp:
-	.text       start:0x8007AAFC end:0x8007ACB8
+	.text       start:0x8007A8D0 end:0x8007ACB8
 
 SD2/Game/flat/zEntTrigger.cpp:
 	.text       start:0x8007ACB8 end:0x8007B08C
 
 SD2/Game/flat/zEntVillain.cpp:
-	.text       start:0x8007BC1C end:0x800A9CE4
+	.text       start:0x8007B08C end:0x800A9F68
 
 SD2/Game/flat/zEnv.cpp:
 	.text       start:0x800A9F78 end:0x800AA338
@@ -310,7 +310,7 @@ SD2/Game/flat/zFMV.cpp:
 	.sdata2     start:0x80261200 end:0x8026121C
 
 SD2/Game/flat/zFog.cpp:
-	.text       start:0x800ABE8C end:0x800AC010
+	.text       start:0x800ABE88 end:0x800AC010
 
 SD2/Game/flat/zFX.cpp:
 	.text       start:0x800AC010 end:0x800AC0BC
@@ -319,7 +319,7 @@ SD2/Game/flat/zGame.cpp:
 	.text       start:0x800AC728 end:0x800ADC40
 
 SD2/Game/flat/zGameExtras.cpp:
-	.text       start:0x800ADC40 end:0x800AEF54
+	.text       start:0x800ADC40 end:0x800AF8D8
 
 SD2/Game/flat/zGameState.cpp:
 	.text       start:0x800AF8D8 end:0x800AFD6C
@@ -331,10 +331,10 @@ SD2/Game/flat/zGust.cpp:
 	.text       start:0x800AFF5C end:0x800B07B4
 
 SD2/Game/flat/zHologram.cpp:
-	.text       start:0x800B07B4 end:0x800B09C8
+	.text       start:0x800B07B4 end:0x800B09F0
 
 SD2/Game/flat/zHud.cpp:
-	.text       start:0x800B0CF4 end:0x800B9808
+	.text       start:0x800B09F0 end:0x800B9808
 	.ctors      start:0x8018E5C8 end:0x8018E5CC
 
 SD2/Game/flat/zLaugh.cpp:
@@ -347,52 +347,52 @@ SD2/Game/flat/zLightEffect.cpp:
 	.text       start:0x800BA800 end:0x800BAE00
 
 SD2/Game/flat/zLightning.cpp:
-	.text       start:0x800BAE00 end:0x800BBAF4
+	.text       start:0x800BAE00 end:0x800BBB1C
 
 SD2/Game/flat/zLobMaster.cpp:
 	.text       start:0x800BBB1C end:0x800BE608
 
 SD2/Game/flat/zMain.cpp:
-	.text       start:0x800BE88C end:0x800BF644
+	.text       start:0x800BE608 end:0x800BF644
 
 SD2/Game/flat/zMenu.cpp:
 	.text       start:0x800BF644 end:0x800BFD30
 
 SD2/Game/flat/zMovePoint.cpp:
-	.text       start:0x800BFED4 end:0x800C0524
+	.text       start:0x800BFD30 end:0x800C0524
 
 SD2/Game/flat/zMusic.cpp:
 	.text       start:0x800C0524 end:0x800C2EB0
 
 SD2/Game/flat/zParCmd.cpp:
-	.text       start:0x800C30D8 end:0x800C4BE0
+	.text       start:0x800C2EB0 end:0x800C4BE0
 
 SD2/Game/flat/zParEmitter.cpp:
 	.text       start:0x800C4BE0 end:0x800C6708
 
 SD2/Game/flat/zParSys.cpp:
-	.text       start:0x800C6708 end:0x800C6FE0
+	.text       start:0x800C6708 end:0x800C7000
 
 SD2/Game/flat/zPendulum.cpp:
-	.text       start:0x800C7204 end:0x800C751C
+	.text       start:0x800C7000 end:0x800C751C
 
 SD2/Game/flat/zPlatform.cpp:
-	.text       start:0x800C7AA4 end:0x800C8AE4
+	.text       start:0x800C7680 end:0x800C8AE4
 
 SD2/Game/flat/zPortal.cpp:
 	.text       start:0x800C8AE4 end:0x800C8BDC
 
 SD2/Game/flat/zRenderState.cpp:
-	.text       start:0x800C8C44 end:0x800C90D4
+	.text       start:0x800C8BDC end:0x800C90D4
 
 SD2/Game/flat/zRumble.cpp:
 	.text       start:0x800C90D4 end:0x800C9368
 
 SD2/Game/flat/zSaveLoad.cpp:
-	.text       start:0x800C9738 end:0x800CD254
+	.text       start:0x800C9738 end:0x800CD268
 
 SD2/Game/flat/zScene.cpp:
-	.text       start:0x800CD2D8 end:0x800D1B20
+	.text       start:0x800CD268 end:0x800D1B20
 	.ctors      start:0x8018E5CC end:0x8018E5D0
 
 SD2/Game/flat/zScript.cpp:
@@ -418,10 +418,10 @@ SD2/Game/flat/zVar.cpp:
 	.text       start:0x800D527C end:0x800D7E00
 
 SD2/Game/flat/iAnim.cpp:
-	.text       start:0x800D8454 end:0x800D84A0
+	.text       start:0x800D7E00 end:0x800D84A0
 
 SD2/Game/flat/iSnd.cpp:
-	.text       start:0x800D955C end:0x800DB6F8
+	.text       start:0x800D89EC end:0x800DB6F8
 
 PowerPC_EABI_Support/Runtime/Src/global_destructor_chain.c:
 	.text       start:0x800E5774 end:0x800E57BC
