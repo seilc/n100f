@@ -28,7 +28,8 @@ SD2/Game/flat/iDebug.cpp:
 	.text       start:0x80009A20 end:0x80009CC0
 
 SD2/Game/flat/iDraw.cpp:
-	.text       start:0x80009CC0 end:0x80009CCC
+	.text       start:0x80009CC0 end:0x8000A0D4
+	.sdata2     start:0x8025F960 end:0x8025F974
 
 SD2/Game/flat/iEnv.cpp:
 	.text       start:0x8000A0D4 end:0x8000A49C

@@ -341,7 +341,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/iCollide.cpp"),
             Object(Matching, "SD2/Game/flat/iCollideFast.cpp"),
             Object(NonMatching, "SD2/Game/flat/iDebug.cpp"),
-            Object(NonMatching, "SD2/Game/flat/iDraw.cpp"),
+            Object(Matching, "SD2/Game/flat/iDraw.cpp"),
             Object(NonMatching, "SD2/Game/flat/iEnv.cpp"),
             Object(NonMatching, "SD2/Game/flat/iFile.cpp"),
             Object(NonMatching, "SD2/Game/flat/iFont.cpp"),
