@@ -229,10 +229,14 @@ SD2/Game/flat/xTRC.cpp:
 	.text       start:0x80040FCC end:0x80044780
 
 SD2/Game/flat/xutil.cpp:
-	.text       start:0x80044780 end:0x80044BCC
+	.text       start:0x80044780 end:0x80044C44
+	.data       start:0x801B6798 end:0x801B6BD8
+	.sdata      start:0x8025E498 end:0x8025E4A0
+	.sbss       start:0x8025EBF8 end:0x8025EC00
+	.sdata2     start:0x802603A8 end:0x802603B8
 
 SD2/Game/flat/zActionLine.cpp:
-	.text       start:0x80044BCC end:0x80044E20
+	.text       start:0x80044C44 end:0x80044E20
 
 SD2/Game/flat/zAnimList.cpp:
 	.text       start:0x80044E20 end:0x80045174

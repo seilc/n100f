@@ -405,7 +405,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xString.cpp"),
             Object(Matching, "SD2/Game/flat/xSurface.cpp"),
             Object(NonMatching, "SD2/Game/flat/xTRC.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xutil.cpp"),
+            Object(Matching, "SD2/Game/flat/xutil.cpp"),
             Object(NonMatching, "SD2/Game/flat/zActionLine.cpp"),
             Object(NonMatching, "SD2/Game/flat/zAnimList.cpp"),
             Object(NonMatching, "SD2/Game/flat/zAssetTypes.cpp"),
