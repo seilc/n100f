@@ -6,11 +6,20 @@
 
 #define RAND_MAX 32767
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+double atof(const char *str);
 void srand(unsigned int seed);
 int rand(void);
 void abort(void);
 void exit(int status);
 size_t wcstombs(char *dest, const wchar_t *src, size_t max);
+
+#ifdef __cplusplus
+}
+#endif
 
 #ifdef __MWERKS__
 #define abs(x) __abs(x)

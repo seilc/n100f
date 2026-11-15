@@ -402,7 +402,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xSnd.cpp"),
             Object(NonMatching, "SD2/Game/flat/xSpline.cpp"),
             Object(NonMatching, "SD2/Game/flat/xstransvc.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xString.cpp"),
+            Object(Matching, "SD2/Game/flat/xString.cpp"),
             Object(Matching, "SD2/Game/flat/xSurface.cpp"),
             Object(NonMatching, "SD2/Game/flat/xTRC.cpp"),
             Object(Matching, "SD2/Game/flat/xutil.cpp"),

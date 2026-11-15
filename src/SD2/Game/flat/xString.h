@@ -1,6 +1,13 @@
 #ifndef XSTRING_H
 #define XSTRING_H
 
-S32 xStricmp(char* string1, char* string2);
+#include "types.h"
+
+U32 xStrHash(char* str);
+char* xStrTok(char* string, const char* control, char** nextoken);
+char* xStrTokBuffer(const char* string, const char* control, void* buffer);
+S32 xStricmp(const char* string1, const char* string2);
+char* xStrupr(char* string);
+S32 xStrParseFloatList(F32* dest, const char* strbuf, S32 max);
 
 #endif
