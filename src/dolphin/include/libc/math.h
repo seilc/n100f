@@ -5,6 +5,10 @@
 #define HUGE_VALF (1.0f / 0.0f)
 #define INFINITY  (1.0f / 0.0f)
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 double fabs(double x);
 double sin(double x);
 double cos(double x);
@@ -107,6 +111,10 @@ inline float fmodf(float x, float m)
 
 #ifdef __MWERKS__
 #pragma cplusplus reset
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

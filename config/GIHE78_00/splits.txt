@@ -182,7 +182,9 @@ SD2/Game/flat/xpkrsvc.cpp:
 	.text       start:0x80033620 end:0x80035854
 
 SD2/Game/flat/xQuickCull.cpp:
-	.text       start:0x800367E0 end:0x80036908
+	.text       start:0x80035854 end:0x80036908
+	.sbss       start:0x8025EB18 end:0x8025EB6C
+	.sdata2     start:0x80260128 end:0x80260134
 
 SD2/Game/flat/xsavegame.cpp:
 	.text       start:0x80036908 end:0x80038D48

@@ -1,6 +1,8 @@
 #ifndef XMATH3_H
 #define XMATH3_H
 
+#include "iMath3.h"
+
 typedef struct _xVec3
 {
     F32 x, y, z;
@@ -72,6 +74,16 @@ typedef struct _xRay3
     F32 max_t;
     S32 flags;
 } xRay3;
+
+inline void xVec3Init(xVec3* v, F32 _x, F32 _y, F32 _z)
+{
+    v->x = _x, v->y = _y, v->z = _z;
+}
+
+inline void xVec3Add(xVec3* o, const xVec3* a, const xVec3* b)
+{
+    o->x = a->x + b->x, o->y = a->y + b->y, o->z = a->z + b->z;
+}
 
 inline void xVec3SMul(xVec3* o, const xVec3* v, F32 s)
 {
