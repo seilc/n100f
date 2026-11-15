@@ -369,7 +369,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xCollide.cpp"),
             Object(NonMatching, "SD2/Game/flat/xCollideFast.cpp"),
             Object(NonMatching, "SD2/Game/flat/xDebug.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xDraw.cpp"),
+            Object(Matching, "SD2/Game/flat/xDraw.cpp"),
             Object(NonMatching, "SD2/Game/flat/xEnt.cpp"),
             Object(NonMatching, "SD2/Game/flat/xEntDrive.cpp"),
             Object(NonMatching, "SD2/Game/flat/xEntMotion.cpp"),

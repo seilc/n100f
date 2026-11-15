@@ -96,6 +96,20 @@ struct RwRGBA
     RwUInt8 alpha;
 };
 
+struct rwGameCube2DVertex
+{
+    RwReal x;
+    RwReal y;
+    RwReal z;
+    RwUInt8 r;
+    RwUInt8 g;
+    RwUInt8 b;
+    RwUInt8 a;
+    RwReal u;
+    RwReal v;
+    RwReal recipz;
+};
+
 enum RwRenderState
 {
     rwRENDERSTATENARENDERSTATE,
@@ -336,6 +350,20 @@ struct RwObject
 #define RWSRCGLOBAL(variable) (((RwGlobals *)RwEngineInstance)->variable)
 #define rwObjectGetParent(object) (((const RwObject *)(object))->parent)
 
+#define RwIm2DVertexSetIntRGBA(vert, red, green, blue, alpha)  \
+    MACRO_START                                                \
+    {                                                          \
+        ((vert)->r = (red));                                   \
+        ((vert)->g = (green));                                 \
+        ((vert)->b = (blue));                                  \
+        ((vert)->a = (alpha));                                 \
+    }                                                          \
+    MACRO_STOP
+
+#define RwIm2DVertexSetScreenX(vert, scrnx) ((vert)->x = (scrnx))
+#define RwIm2DVertexSetScreenY(vert, scrny) ((vert)->y = (scrny))
+#define RwIm2DVertexSetScreenZ(vert, scrnz) ((vert)->z = (scrnz))
+
 #define RwV3dAddMacro(o, a, b)            \
     MACRO_START                           \
     {                                     \
@@ -352,6 +380,9 @@ extern "C" {
 extern void* RwEngineInstance;
 
 RwBool RwRenderStateSet(RwRenderState state, void* value);
+
+RwReal RwIm2DGetNearScreenZ(void);
+RwBool RwIm2DRenderLine(RwIm2DVertex* vertices, RwInt32 numVertices, RwInt32 vert1, RwInt32 vert2);
 
 #if (defined(RWDEBUG) || defined(RWSUPPRESSINLINE))
 void RwV3dAdd(RwV3d* out, const RwV3d* ina, const RwV3d* inb);
