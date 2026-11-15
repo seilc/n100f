@@ -390,7 +390,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xPad.cpp"),
             Object(NonMatching, "SD2/Game/flat/xPar.cpp"),
             Object(NonMatching, "SD2/Game/flat/xParGroup.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xParMgr.cpp"),
+            Object(Matching, "SD2/Game/flat/xParMgr.cpp"),
             Object(NonMatching, "SD2/Game/flat/xPartition.cpp"),
             Object(NonMatching, "SD2/Game/flat/xpkrsvc.cpp"),
             Object(NonMatching, "SD2/Game/flat/xQuickCull.cpp"),

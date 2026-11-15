@@ -171,6 +171,7 @@ SD2/Game/flat/xParGroup.cpp:
 
 SD2/Game/flat/xParMgr.cpp:
 	.text       start:0x80032D28 end:0x80032DEC
+	.sbss       start:0x8025EAE8 end:0x8025EAF0
 
 SD2/Game/flat/xPartition.cpp:
 	.text       start:0x80032DEC end:0x8003361C
