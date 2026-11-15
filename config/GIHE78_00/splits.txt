@@ -290,7 +290,11 @@ SD2/Game/flat/zFeet.cpp:
 	.text       start:0x800AA338 end:0x800ABD84
 
 SD2/Game/flat/zFMV.cpp:
-	.text       start:0x800ABD84 end:0x800ABD9C
+	.text       start:0x800ABD84 end:0x800ABE88
+	.rodata     start:0x801A4268 end:0x801A4274
+	.data       start:0x801C5590 end:0x801C5BF8
+	.sbss       start:0x8025EEC8 end:0x8025EECC
+	.sdata2     start:0x80261200 end:0x8026121C
 
 SD2/Game/flat/zFog.cpp:
 	.text       start:0x800ABE8C end:0x800AC010

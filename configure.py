@@ -233,14 +233,16 @@ elif args.warn == "error":
 # Game code flags: CW GC 1.3.2 (Scooby's game code compiler). BFBB's game code flags
 # (its configure.py) minus `-pragma "cpp_extensions on"` and `-gccinc` (set for BFBB's own
 # source; open for Scooby), and `-str reuse,readonly` without `pool` (more Scooby functions
-# reproduced without it).
+# reproduced without it). Unlike BFBB: `-char signed` (Scooby sign-extends chars) and `-O4,s`
+# (lmw/stmw for two registers).
 cflags_game = [
     *cflags_base,
     "-lang=c++",
     "-common on",
-    "-char unsigned",
+    "-char signed",
     "-str reuse,readonly",
     "-use_lmw_stmw on",
+    "-O4,s",
     "-inline auto,deferred",
     "-i src/dolphin/include",
     "-i src/dolphin/include/libc",
@@ -427,7 +429,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/zEntVillain.cpp"),
             Object(NonMatching, "SD2/Game/flat/zEnv.cpp"),
             Object(NonMatching, "SD2/Game/flat/zFeet.cpp"),
-            Object(NonMatching, "SD2/Game/flat/zFMV.cpp"),
+            Object(Matching, "SD2/Game/flat/zFMV.cpp"),
             Object(NonMatching, "SD2/Game/flat/zFog.cpp"),
             Object(NonMatching, "SD2/Game/flat/zFX.cpp"),
             Object(NonMatching, "SD2/Game/flat/zGame.cpp"),

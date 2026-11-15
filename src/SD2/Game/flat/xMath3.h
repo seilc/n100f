@@ -6,6 +6,54 @@ typedef struct _xVec3
     F32 x, y, z;
 } xVec3;
 
+typedef struct _xVec4
+{
+    F32 x, y, z, w;
+} xVec4;
+
+typedef struct _xMat4x3
+{
+    xVec3 right;
+    S32 flags;
+    xVec3 up;
+    U32 pad1;
+    xVec3 at;
+    U32 pad2;
+    xVec3 pos;
+    U32 pad3;
+} xMat4x3;
+
+typedef struct _xQuat
+{
+    xVec3 v;
+    F32 s;
+} xQuat;
+
+typedef struct _xSphere
+{
+    xVec3 center;
+    F32 r;
+} xSphere;
+
+typedef struct _xBox
+{
+    xVec3 upper;
+    xVec3 lower;
+} xBox;
+
+typedef struct _xBBox
+{
+    xVec3 center;
+    xBox box;
+} xBBox;
+
+typedef struct _xCylinder
+{
+    xVec3 center;
+    F32 r;
+    F32 h;
+} xCylinder;
+
 typedef struct _xLine3
 {
     xVec3 p1;

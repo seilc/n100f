@@ -27,6 +27,7 @@ typedef struct RwLinkList RwLinkList;
 typedef struct RwMemoryFunctions RwMemoryFunctions;
 typedef struct RwMetrics RwMetrics;
 typedef struct RwObject RwObject;
+typedef struct RwRGBA RwRGBA;
 typedef struct RwSphere RwSphere;
 typedef struct RwStringFunctions RwStringFunctions;
 typedef struct RwV3d RwV3d;
@@ -87,6 +88,14 @@ struct RwLine
     RwV3d end;
 };
 
+struct RwRGBA
+{
+    RwUInt8 red;
+    RwUInt8 green;
+    RwUInt8 blue;
+    RwUInt8 alpha;
+};
+
 enum RwRenderState
 {
     rwRENDERSTATENARENDERSTATE,
@@ -121,6 +130,16 @@ enum RwRenderState
     rwRENDERSTATEFORCEENUMSIZEINT = RWFORCEENUMSIZEINT,
 };
 typedef enum RwRenderState RwRenderState;
+
+enum RwFogType
+{
+    rwFOGTYPENAFOGTYPE = 0,
+    rwFOGTYPELINEAR,
+    rwFOGTYPEEXPONENTIAL,
+    rwFOGTYPEEXPONENTIAL2,
+    rwFOGTYPEFORCEENUMSIZEINT = RWFORCEENUMSIZEINT,
+};
+typedef enum RwFogType RwFogType;
 
 enum RwBlendFunction
 {
