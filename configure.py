@@ -363,7 +363,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xAnim.cpp"),
             Object(Matching, "SD2/Game/flat/xBase.cpp"),
             Object(NonMatching, "SD2/Game/flat/xbinio.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xBound.cpp"),
+            Object(Matching, "SD2/Game/flat/xBound.cpp"),
             Object(NonMatching, "SD2/Game/flat/xCamera.cpp"),
             Object(Matching, "SD2/Game/flat/xClimate.cpp"),
             Object(Matching, "SD2/Game/flat/xCollide.cpp"),

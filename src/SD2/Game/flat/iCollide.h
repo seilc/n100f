@@ -7,6 +7,8 @@ typedef struct _xCollis xCollis;
 typedef struct _xEnv xEnv;
 typedef struct _xRay3 xRay3;
 typedef struct _xScene xScene;
+typedef struct _xSphere xSphere;
+struct xModelInstance;
 
 typedef struct _iCollis
 {
@@ -15,5 +17,6 @@ typedef struct _iCollis
 
 void iCollideInit(xScene* sc);
 U32 iRayHitsEnv(const xRay3* r, const xEnv* env, xCollis* coll);
+S32 iSphereHitsModel3(const xSphere* b, const xModelInstance* m, xCollis* colls, U8 ncolls, F32 sth);
 
 #endif

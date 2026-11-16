@@ -150,6 +150,17 @@ inline F32 xVec3Length(const xVec3* v)
     return xsqrt(v->x * v->x + v->y * v->y + v->z * v->z);
 }
 
+inline F32 xVec3Length2(const xVec3* v)
+{
+    return v->x * v->x + v->y * v->y + v->z * v->z;
+}
+
+#define xBoxCenter(o, b)                        \
+do {                                            \
+    xVec3Add((o), &(b)->lower, &(b)->upper);    \
+    xVec3SMul((o), (o), 0.5f);                  \
+} while (0)
+
 #define xLine3FromRay(ln, r)                                                                                                                        \
 do {                                                                                                                                                \
     if ((r)->flags & XRAY3_USE_MIN) {                                                                                                               \

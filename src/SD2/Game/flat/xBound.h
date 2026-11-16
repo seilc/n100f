@@ -31,6 +31,14 @@ typedef struct _xBound
     xQCData qcd;
 } xBound;
 
+struct xModelInstance;
+
+void xBoundUpdate(xBound* b);
+void xBoundHitsBound(const xBound* a, const xBound* b, xCollis* c);
+void xBoundHitsModel(const xBound* b, const xModelInstance* m, xCollis* colls, U8 ncolls, F32 sth);
+void xRayHitsBound(const xRay3* r, const xBound* b, xCollis* c);
 void xRayHitsBound(const xRay3* r, const xQCData* q, const xBound* b, xCollis* c);
+void xVecHitsBound(const xVec3* v, const xBound* b, xCollis* c);
+xVec3* xBoundCenter(xBound* b);
 
 #endif

@@ -90,6 +90,7 @@ SD2/Game/flat/xbinio.cpp:
 
 SD2/Game/flat/xBound.cpp:
 	.text       start:0x8001D1F8 end:0x8001D9A0
+	.sdata2     start:0x8025FBE8 end:0x8025FC10
 
 SD2/Game/flat/xCamera.cpp:
 	.text       start:0x8001D9A0 end:0x8002086C
