@@ -35,6 +35,12 @@ typedef void(*xEntBoundUpdateCallback)(xEnt*, xVec3*);
 typedef void(*xEntMoveCallback)(xEnt*, xScene*, F32, xEntFrame*);
 typedef void(*xEntRenderCallback)(xEnt*);
 
+// xEnt::collType, chkby, penby; xEntCollis::chk, pen
+#define k_XENT_COLLTYPE_TRIG ((U8)(1 << (0)))
+#define k_XENT_COLLTYPE_STAT ((U8)(1 << (1)))
+#define k_XENT_COLLTYPE_DYN ((U8)(1 << (2)))
+#define k_XENT_COLLTYPE_NPC ((U8)(1 << (3)))
+
 // xEnt::collLev
 #define k_XENT_COLLLEV_FASTEST 0
 #define k_XENT_COLLLEV_AABB 1
@@ -42,6 +48,9 @@ typedef void(*xEntRenderCallback)(xEnt*);
 #define k_XENT_COLLLEV_OBB 3
 #define k_XENT_COLLLEV_BOUND 4
 #define k_XENT_COLLLEV_MODEL 5
+
+// xEnt::moreFlags
+#define k_MORE_FLAGS_CAMERA_COLL ((U8)1<<0)
 
 typedef struct _xEnt : xBase
 {

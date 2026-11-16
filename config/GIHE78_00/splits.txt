@@ -210,6 +210,8 @@ SD2/Game/flat/xsavegame.cpp:
 
 SD2/Game/flat/xScene.cpp:
 	.text       start:0x80038D48 end:0x800394B4
+	.sbss       start:0x8025EB78 end:0x8025EB7C
+	.sdata2     start:0x80260148 end:0x80260150
 
 SD2/Game/flat/xScrFx.cpp:
 	.text       start:0x800394B4 end:0x80039C90

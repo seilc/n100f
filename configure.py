@@ -395,7 +395,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xpkrsvc.cpp"),
             Object(Matching, "SD2/Game/flat/xQuickCull.cpp"),
             Object(NonMatching, "SD2/Game/flat/xsavegame.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xScene.cpp"),
+            Object(Matching, "SD2/Game/flat/xScene.cpp"),
             Object(NonMatching, "SD2/Game/flat/xScrFx.cpp"),
             Object(NonMatching, "SD2/Game/flat/xserializer.cpp"),
             Object(NonMatching, "SD2/Game/flat/xShadow.cpp"),

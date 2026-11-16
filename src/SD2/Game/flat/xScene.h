@@ -5,9 +5,14 @@
 #include "xEnv.h"
 #include "xMemMgr.h"
 
+typedef struct _xCollis xCollis;
+struct xSerial;
+
 typedef xBase*(*xSceneResolvIDCallback)(U32);
 typedef char*(*xSceneBase2NameCallback)(xBase*);
 typedef char*(*xSceneID2NameCallback)(U32);
+typedef xEnt*(*xSceneEntCallback)(xEnt*, xScene*, void*);
+typedef void(*xRayCameraCallback)(xEnt*);
 
 typedef struct _xScene
 {
@@ -40,6 +45,20 @@ typedef struct _xScene
     xSceneID2NameCallback id2Name;
 } xScene;
 
+extern xScene* g_xSceneCur;
+
+void xSceneInit(xScene* sc, U16 num_trigs, U16 num_stats, U16 num_dyns, U16 num_npcs);
+void xSceneSave(xScene* ent, xSerial* s);
+void xSceneLoad(xScene* ent, xSerial* s);
+void xSceneSetup(xScene* sc);
+void xSceneAddEnt(xScene* sc, xEnt* ent);
 xBase* xSceneResolvID(xScene* sc, U32 id);
+const char* xSceneID2Name(xScene* sc, U32 id);
+void xSceneForAllTriggers(xScene* sc, xSceneEntCallback func, void* data);
+void xSceneForAllStatics(xScene* sc, xSceneEntCallback func, void* data);
+void xSceneForAllDynamics(xScene* sc, xSceneEntCallback func, void* data);
+void xSceneForAllNPCs(xScene* sc, xSceneEntCallback func, void* data);
+void xRayHitsScene(xScene* sc, xRay3* r, xCollis* coll);
+void xRayHitsCameraScene(xScene* sc, xRay3* r, xRayCameraCallback camera_func);
 
 #endif

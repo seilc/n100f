@@ -4,6 +4,8 @@
 #include "xMath3.h"
 #include "xQuickCull.h"
 
+typedef struct _xCollis xCollis;
+
 enum xBoundType
 {
     k_XBOUNDTYPE_NONE,
@@ -28,5 +30,7 @@ typedef struct _xBound
     xMat4x3* mat;
     xQCData qcd;
 } xBound;
+
+void xRayHitsBound(const xRay3* r, const xQCData* q, const xBound* b, xCollis* c);
 
 #endif

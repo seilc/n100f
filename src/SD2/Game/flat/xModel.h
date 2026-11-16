@@ -24,4 +24,7 @@ struct xModelInstance
     xVec3 Scale;
 };
 
+void xModelInit();
+void xModelPoolInit(U32 count, U32 numMatrices);
+
 #endif
