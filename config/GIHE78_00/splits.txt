@@ -102,6 +102,7 @@ SD2/Game/flat/xClimate.cpp:
 
 SD2/Game/flat/xCollide.cpp:
 	.text       start:0x80020F08 end:0x80021620
+	.sdata2     start:0x8025FCB8 end:0x8025FCD8
 
 SD2/Game/flat/xCollideFast.cpp:
 	.text       start:0x80021620 end:0x80021B10

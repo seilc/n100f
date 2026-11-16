@@ -8,8 +8,10 @@ typedef struct _xRay3 xRay3;
 typedef struct _xIsect xIsect;
 typedef struct _xMat4x3 xMat4x3;
 
+void iSphereIsectSphere(const xSphere* s, const xSphere* p, xIsect* isx);
 void iSphereInitBoundOBB(xSphere* s, const xBox* b, const xMat4x3* m);
 void iCylinderIsectRay(const xCylinder* c, const xRay3* r, xIsect* isx);
 void iBoxIsectRay(const xBox* b, const xRay3* r, xIsect* isx);
+void iBoxIsectSphere(const xBox* box, const xSphere* p, xIsect* isx);
 
 #endif

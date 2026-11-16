@@ -181,6 +181,7 @@ inline F32 xVec3Hdng(xVec3* hdng, const xVec3* a, const xVec3* b)
     return xVec3Normalize(hdng, hdng);
 }
 
+extern const xVec3 g_O3;
 extern const xMat4x3 g_I3;
 
 void xMath3Init();
