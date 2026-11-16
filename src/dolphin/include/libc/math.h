@@ -12,12 +12,17 @@ extern "C" {
 double fabs(double x);
 double sin(double x);
 double cos(double x);
+double exp(double x);
 
 float sinf(float x);
 float cosf(float x);
 float tanf(float x);
 float acosf(float x);
 float powf(float base, float exponent);
+float expf(float x);
+
+inline float sinf(float x) { return (float)sin((double)x); }
+inline float expf(float x) { return (float)exp((double)x); }
 
 double ldexp(double x, int exp);
 

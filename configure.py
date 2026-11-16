@@ -374,7 +374,7 @@ config.libs = [
             Object(Matching, "SD2/Game/flat/xEntDrive.cpp"),
             Object(NonMatching, "SD2/Game/flat/xEntMotion.cpp"),
             Object(Matching, "SD2/Game/flat/xEnv.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xFFX.cpp"),
+            Object(Matching, "SD2/Game/flat/xFFX.cpp"),
             Object(NonMatching, "SD2/Game/flat/xFont.cpp"),
             Object(NonMatching, "SD2/Game/flat/xFX.cpp"),
             Object(NonMatching, "SD2/Game/flat/xhipio.cpp"),
