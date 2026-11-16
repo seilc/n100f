@@ -5,6 +5,7 @@
 
 #include <math.h>
 
+#define PI 3.14159265358979323846f
 #define MIN(a,b) ((a) < (b) ? (a) : (b))
 #define MAX(a,b) ((a) > (b) ? (a) : (b))
 #define CLAMP(x,a,b) MAX((a), MIN((x), (b)))
