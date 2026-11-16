@@ -13,16 +13,25 @@ double fabs(double x);
 double sin(double x);
 double cos(double x);
 double exp(double x);
+double atan2(double y, double x);
+double fmod(double x, double y);
+double pow(double x, double y);
 
 float sinf(float x);
 float cosf(float x);
 float tanf(float x);
 float acosf(float x);
+float atan2f(float y, float x);
 float powf(float base, float exponent);
 float expf(float x);
 
+#ifdef __cplusplus
 inline float sinf(float x) { return (float)sin((double)x); }
+inline float cosf(float x) { return (float)cos((double)x); }
+inline float atan2f(float y, float x) { return (float)atan2((double)y, (double)x); }
+inline float powf(float base, float exponent) { return (float)pow((double)base, (double)exponent); }
 inline float expf(float x) { return (float)exp((double)x); }
+#endif
 
 double ldexp(double x, int exp);
 
@@ -101,18 +110,7 @@ long __fpclassifyd(double x);
 #define fpclassify(x) (sizeof(x) == sizeof(float) ? __fpclassifyf((float)(x)) : __fpclassifyd((double)(x)))
 #define isfinite(x) ((fpclassify(x) > FP_INFINITE))
 
-inline float fmodf(float x, float m)
-{
-    float a = fabsf(m);
-    float b = fabsf(x);
-    if (a > b)
-        return x;
-    else
-    {
-        long long c = (long long)(x / m);
-        return x - m * c;
-    }
-}
+inline float fmodf(float x, float m) { return (float)fmod((double)x, (double)m); }
 
 #ifdef __MWERKS__
 #pragma cplusplus reset

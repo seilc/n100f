@@ -154,6 +154,7 @@ SD2/Game/flat/xLinkList.cpp:
 
 SD2/Game/flat/xMath.cpp:
 	.text       start:0x8002C86C end:0x8002CF48
+	.sdata2     start:0x8025FFA0 end:0x80260008
 
 SD2/Game/flat/xMath3.cpp:
 	.text       start:0x8002CF48 end:0x8002F920

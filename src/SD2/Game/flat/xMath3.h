@@ -183,6 +183,8 @@ inline F32 xVec3Hdng(xVec3* hdng, const xVec3* a, const xVec3* b)
 
 extern const xMat4x3 g_I3;
 
+void xMath3Init();
+void xMath3Exit();
 void xMat3x3Normalize(xMat3x3* o, const xMat3x3* m);
 void xMat3x3GetEuler(xMat3x3* m, xVec3* a);
 void xMat3x3Mul(xMat3x3* o, const xMat3x3* a, const xMat3x3* b);
