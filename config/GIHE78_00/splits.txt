@@ -119,6 +119,7 @@ SD2/Game/flat/xEnt.cpp:
 
 SD2/Game/flat/xEntDrive.cpp:
 	.text       start:0x800258F4 end:0x80025F04
+	.sdata2     start:0x8025FE50 end:0x8025FE58
 
 SD2/Game/flat/xEntMotion.cpp:
 	.text       start:0x80025F04 end:0x80028D18

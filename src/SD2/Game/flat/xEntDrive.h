@@ -21,4 +21,9 @@ typedef struct _xEntDrive
     F32 yaw;
 } xEntDrive;
 
+void xEntDriveInit(xEntDrive* drv, xEnt* driven);
+void xEntDriveMount(xEntDrive* drv, xEnt* driver, F32 mt);
+void xEntDriveDismount(xEntDrive* drv, F32 dmt);
+void xEntDriveUpdate(xEntDrive* drv, xScene*, F32 dt);
+
 #endif

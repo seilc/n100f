@@ -371,7 +371,7 @@ config.libs = [
             Object(Matching, "SD2/Game/flat/xDebug.cpp"),
             Object(Matching, "SD2/Game/flat/xDraw.cpp"),
             Object(NonMatching, "SD2/Game/flat/xEnt.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xEntDrive.cpp"),
+            Object(Matching, "SD2/Game/flat/xEntDrive.cpp"),
             Object(NonMatching, "SD2/Game/flat/xEntMotion.cpp"),
             Object(Matching, "SD2/Game/flat/xEnv.cpp"),
             Object(NonMatching, "SD2/Game/flat/xFFX.cpp"),

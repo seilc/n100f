@@ -42,6 +42,12 @@ typedef struct _xQuat
     F32 s;
 } xQuat;
 
+typedef struct _xRot
+{
+    xVec3 axis;
+    F32 angle;
+} xRot;
+
 typedef struct _xSphere
 {
     xVec3 center;
@@ -102,6 +108,11 @@ inline void xVec3Init(xVec3* v, F32 _x, F32 _y, F32 _z)
     v->x = _x, v->y = _y, v->z = _z;
 }
 
+inline void xVec3Copy(xVec3* o, const xVec3* v)
+{
+    o->x = v->x, o->y = v->y, o->z = v->z;
+}
+
 inline void xVec3Add(xVec3* o, const xVec3* a, const xVec3* b)
 {
     o->x = a->x + b->x, o->y = a->y + b->y, o->z = a->z + b->z;
@@ -115,6 +126,16 @@ inline void xVec3Sub(xVec3* o, const xVec3* a, const xVec3* b)
 inline void xVec3SMul(xVec3* o, const xVec3* v, F32 s)
 {
     o->x = v->x * s, o->y = v->y * s, o->z = v->z * s;
+}
+
+inline void xVec3AddTo(xVec3* a, const xVec3* b)
+{
+    a->x += b->x, a->y += b->y, a->z += b->z;
+}
+
+inline void xVec3SMulBy(xVec3* v, F32 s)
+{
+    v->x *= s, v->y *= s, v->z *= s;
 }
 
 inline F32 xVec3Dot(const xVec3* a, const xVec3* b)
@@ -159,7 +180,17 @@ inline F32 xVec3Hdng(xVec3* hdng, const xVec3* a, const xVec3* b)
 }
 
 void xMat3x3Normalize(xMat3x3* o, const xMat3x3* m);
+void xMat3x3GetEuler(xMat3x3* m, xVec3* a);
+void xMat3x3Mul(xMat3x3* o, const xMat3x3* a, const xMat3x3* b);
 void xMat3x3Tolocal(xVec3* o, const xMat3x3* m, const xVec3* v);
+void xMat3x3RotY(xMat3x3* m, F32 t);
+void xMat3x3RMulVec(xVec3* o, const xMat3x3* m, const xVec3* v);
+
+inline void xMat4x3ToWorld(xVec3* o, const xMat4x3* m, const xVec3* v)
+{
+    xMat3x3RMulVec(o, (const xMat3x3*)m, v);
+    o->x = o->x + m->pos.x, o->y = o->y + m->pos.y, o->z = o->z + m->pos.z;
+}
 
 inline void xMat4x3ToLocal(xVec3* o, const xMat4x3* m, const xVec3* v)
 {

@@ -15,6 +15,21 @@ struct xFFX;
 struct xModelInstance;
 struct xSurface;
 
+typedef struct _xEntFrame
+{
+    xMat4x3 mat;
+    xMat4x3 dmat;
+    xVec3 oldpos;
+    xVec3 oldvel;
+    xRot oldrot;
+    xRot drot;
+    xRot rot;
+    xVec3 dpos;
+    xVec3 dvel;
+    xVec3 vel;
+    U32 mode;
+} xEntFrame;
+
 typedef void(*xEntUpdateCallback)(xEnt*, xScene*, F32);
 typedef void(*xEntBoundUpdateCallback)(xEnt*, xVec3*);
 typedef void(*xEntMoveCallback)(xEnt*, xScene*, F32, xEntFrame*);
