@@ -42,3 +42,12 @@ The project is built with [decomp-toolkit](https://github.com/encounter/decomp-t
 [dtk-template](https://github.com/encounter/dtk-template) layout; [objdiff](https://github.com/encounter/objdiff)
 reads the generated `objdiff.json`. The DOL's entry point is a Heavy Iron wrapper around `__start`, so the build splits
 a copy of the DOL with `__start` as its entry (`tools/patch_entry.py`).
+
+Credits
+=======
+
+**[mitsevox/n100f](https://github.com/mitsevox/n100f)** -
+An independent decompilation of this game, whose build notes were read for comparison; none of its code is used here.
+
+Code ported from the Ratatouille, Rise of the Underminer, Incredibles, SpongeBob Movie and Battle for Bikini Bottom
+decomps is credited in those repositories.
