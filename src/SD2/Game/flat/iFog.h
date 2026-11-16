@@ -1,6 +1,8 @@
 #ifndef IFOG_H
 #define IFOG_H
 
+#include "types.h"
+
 #include <rwcore.h>
 
 struct iFogParams

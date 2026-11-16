@@ -1,6 +1,8 @@
 #ifndef XDEBUG_H
 #define XDEBUG_H
 
+#include "types.h"
+
 typedef void(*xDebugModeCallback)();
 
 void xprintf(const char* fmt, ...);

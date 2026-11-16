@@ -1,6 +1,8 @@
 #ifndef IENV_H
 #define IENV_H
 
+#include "types.h"
+
 #include <rwcore.h>
 #include <rpworld.h>
 

@@ -1,6 +1,8 @@
 #ifndef ZFMV_H
 #define ZFMV_H
 
+#include "types.h"
+
 enum eFMVFile
 {
     eFMVFile_HeavyIronLOGO,

@@ -1,6 +1,8 @@
 #ifndef ICOLOR_H
 #define ICOLOR_H
 
+#include "types.h"
+
 typedef struct iColor_tag
 {
     U8 r;
