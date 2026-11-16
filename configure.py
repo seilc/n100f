@@ -378,7 +378,7 @@ config.libs = [
             Object(NonMatching, "SD2/Game/flat/xFont.cpp"),
             Object(NonMatching, "SD2/Game/flat/xFX.cpp"),
             Object(NonMatching, "SD2/Game/flat/xhipio.cpp"),
-            Object(NonMatching, "SD2/Game/flat/xIni.cpp"),
+            Object(Matching, "SD2/Game/flat/xIni.cpp"),
             Object(Matching, "SD2/Game/flat/xLinkList.cpp"),
             Object(NonMatching, "SD2/Game/flat/xMath.cpp"),
             Object(NonMatching, "SD2/Game/flat/xMath3.cpp"),

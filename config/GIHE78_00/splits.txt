@@ -144,6 +144,7 @@ SD2/Game/flat/xhipio.cpp:
 
 SD2/Game/flat/xIni.cpp:
 	.text       start:0x8002C100 end:0x8002C774
+	.sdata2     start:0x8025FF90 end:0x8025FFA0
 
 SD2/Game/flat/xLinkList.cpp:
 	.text       start:0x8002C774 end:0x8002C86C
