@@ -1,9 +1,11 @@
 Scooby-Doo! Night of 100 Frights (GameCube)  
-[![Build Status]][actions] <!--[![Code Progress]][progress] [![Data Progress]][progress]--> [![Discord Badge]][discord]
+[![Build Status]][actions] [![GIHE78_00 Progress]][treemap] <!--[![Code Progress]][progress] [![Data Progress]][progress]--> [![Discord Badge]][discord]
 =============
 
 [Build Status]: https://github.com/seilc/n100f/actions/workflows/build.yml/badge.svg
 [actions]: https://github.com/seilc/n100f/actions/workflows/build.yml
+[GIHE78_00 Progress]: https://img.shields.io/endpoint?url=https%3A%2F%2Fseilc.github.io%2Fn100f%2FGIHE78_00.json
+[treemap]: https://seilc.github.io/n100f/treemap.png
 <!--
 decomp.dev progress badges (hidden until the project is registered on decomp.dev)
 See https://decomp.dev/api for an API overview.
@@ -19,6 +21,8 @@ built on Heavy Iron's EvilEngine. Much of the engine is shared with the
 [Ratatouille prototype decomp](https://github.com/seilc/rat), [Rise of the Underminer](https://github.com/seilc/rotu),
 [The Incredibles](https://github.com/seilc/incredibles), [The SpongeBob SquarePants Movie](https://github.com/seilc/tssm)
 and [Battle for Bikini Bottom](https://github.com/seilc/bfbb), which are decompiled side by side with this project.
+
+![Progress treemap][treemap]
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
 
